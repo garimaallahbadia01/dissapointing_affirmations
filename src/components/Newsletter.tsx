@@ -13,16 +13,16 @@ const Newsletter = () => {
       setEmail('');
     }
   };
-  return <section className="py-16 md:py-24 px-6 bg-background">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
+  return <section className="py-16 md:py-24 bg-background">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12">
           {/* Left Image */}
           <div className="hidden lg:block lg:col-span-3">
             <img src={newsletterAngels} alt="Angels with laptop" className="w-full h-full object-cover" />
           </div>
 
           {/* Center Content */}
-          <div className="lg:col-span-5 bg-cream-dark p-8 md:p-12 flex flex-col justify-center">
+          <div className="lg:col-span-5 bg-cream-dark p-8 md:p-12 lg:pr-8 flex flex-col justify-center">
             <h2 className="font-display italic text-2xl md:text-3xl text-foreground leading-relaxed mb-4">
               The ancients foretold<br />thy struggles
             </h2>
