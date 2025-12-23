@@ -9,12 +9,12 @@ const Hero = () => {
       </div>
 
       {/* Left Angel */}
-      <div className="absolute left-0 bottom-0 h-[70%] md:h-[80%] lg:h-[85%] pointer-events-none">
+      <div className="absolute left-0 bottom-0 h-[75%] md:h-[85%] lg:h-[90%] pointer-events-none">
         <img src={angelLeft} alt="Angel with coffee" className="h-full w-auto object-contain object-left-bottom" />
       </div>
 
       {/* Right Angel */}
-      <div className="absolute right-0 bottom-0 h-[70%] md:h-[80%] lg:h-[85%] pointer-events-none">
+      <div className="absolute right-0 bottom-0 h-[75%] md:h-[85%] lg:h-[90%] pointer-events-none">
         <img src={angelRight} alt="Angel with scroll" className="h-full w-auto object-contain object-right-bottom" />
       </div>
 
