@@ -19,7 +19,7 @@ const Navigation = () => {
             <a href="#custom-card" className="text-sm font-sans tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors font-normal">
               Custom Card
             </a>
-            <a href="#about" className="text-sm font-sans font-medium tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#about" className="text-sm font-sans tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors font-normal">
               About
             </a>
           </div>
