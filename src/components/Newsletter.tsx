@@ -12,7 +12,7 @@ const Newsletter = () => {
       setEmail('');
     }
   };
-  return <section className="py-16 md:py-24 px-6 bg-background">
+  return <section className="py-16 bg-background px-0 md:py-0">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
           {/* Left Image */}
