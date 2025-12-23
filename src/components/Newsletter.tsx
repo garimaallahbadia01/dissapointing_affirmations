@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { toast } from 'sonner';
 import newsletterAngels from '@/assets/newsletter-angels.png';
 import newsletterLandscape from '@/assets/newsletter-landscape.png';
-import logo from '@/assets/logo.png';
+import logoWhite from '@/assets/logo-white.png';
 const Newsletter = () => {
   const [email, setEmail] = useState('');
   const handleSubmit = (e: React.FormEvent) => {
@@ -14,7 +14,7 @@ const Newsletter = () => {
   };
   return <section className="py-16 md:py-24 px-6 bg-background">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           {/* Left Image */}
           <div className="hidden lg:block lg:col-span-3">
             <img src={newsletterAngels} alt="Angels with laptop" className="w-full h-full object-cover" />
@@ -47,7 +47,7 @@ const Newsletter = () => {
             <img src={newsletterLandscape} alt="Renaissance landscape" className="w-full h-full object-cover" />
             <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
               {/* Logo */}
-              <img src={logo} alt="Deflated Affirmations logo" className="h-6 w-auto object-contain invert brightness-[2] mb-2" />
+              <img src={logoWhite} alt="Deflated Affirmations logo" className="h-4 w-auto object-contain object-left mb-2" />
               <p className="font-display italic text-xl md:text-2xl text-warm-white leading-relaxed">
                 We are all just doing our mediocre best.
               </p>
