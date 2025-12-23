@@ -47,7 +47,7 @@ const Newsletter = () => {
             <img src={newsletterLandscape} alt="Renaissance landscape" className="w-full h-full object-cover" />
             <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
               {/* Logo */}
-              <img src={logo} alt="Deflated Affirmations logo" className="h-6 mb-2" />
+              <img src={logo} alt="Deflated Affirmations logo" className="h-6 w-auto object-contain brightness-[10] mb-2" />
               <p className="font-display italic text-xl md:text-2xl text-warm-white leading-relaxed">
                 We are all just doing our mediocre best.
               </p>
