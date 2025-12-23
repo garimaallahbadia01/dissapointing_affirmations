@@ -1,40 +1,26 @@
 import heroSky from '@/assets/hero-sky.png';
 import angelLeft from '@/assets/angel-left.png';
 import angelRight from '@/assets/angel-right.png';
-
 const Hero = () => {
-  return (
-    <section className="relative w-full h-screen min-h-[500px] overflow-hidden">
+  return <section className="relative w-full h-screen min-h-[500px] overflow-hidden">
       {/* Background Sky */}
       <div className="absolute inset-0">
-        <img 
-          src={heroSky} 
-          alt="Renaissance sky with rainbow" 
-          className="w-full h-full object-cover object-center"
-        />
+        <img src={heroSky} alt="Renaissance sky with rainbow" className="w-full h-full object-cover object-center" />
       </div>
 
       {/* Left Angel */}
       <div className="absolute left-0 bottom-0 w-[40%] md:w-[35%] h-full pointer-events-none">
-        <img 
-          src={angelLeft} 
-          alt="Angel with coffee" 
-          className="absolute bottom-0 left-0 w-full h-auto max-h-full object-contain object-bottom"
-        />
+        <img src={angelLeft} alt="Angel with coffee" className="absolute bottom-0 left-0 w-full h-auto max-h-full object-contain object-bottom" />
       </div>
 
       {/* Right Angel */}
       <div className="absolute right-0 bottom-0 w-[40%] md:w-[35%] h-full pointer-events-none">
-        <img 
-          src={angelRight} 
-          alt="Angel with scroll" 
-          className="absolute bottom-0 right-0 w-full h-auto max-h-full object-contain object-bottom"
-        />
+        <img src={angelRight} alt="Angel with scroll" className="absolute bottom-0 right-0 w-full h-auto max-h-full object-contain object-bottom" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
-        <h1 className="font-display italic text-3xl md:text-4xl lg:text-5xl text-charcoal max-w-2xl leading-relaxed animate-fade-in-up">
+        <h1 className="font-display italic text-3xl md:text-4xl text-charcoal max-w-2xl leading-relaxed animate-fade-in-up lg:text-6xl">
           Lowering expectations, one<br />affirmation at a time
         </h1>
 
@@ -45,8 +31,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
