@@ -13,13 +13,13 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#merch" className="text-sm font-sans tracking-wider uppercase transition-colors font-normal text-[#412c0b]">
+            <a href="#merch" className="text-sm font-sans tracking-wider uppercase transition-colors font-normal text-[#412c0b] hover:text-[#AD4F21]">
               Merch
             </a>
-            <a href="#custom-card" className="text-sm font-sans tracking-wider uppercase transition-colors font-normal text-[#412c0b]">
+            <a href="#custom-card" className="text-sm font-sans tracking-wider uppercase transition-colors font-normal text-[#412c0b] hover:text-[#AD4F21]">
               Custom Card
             </a>
-            <a href="#about" className="text-sm font-sans tracking-wider uppercase transition-colors font-normal text-[#412c0b]">
+            <a href="#about" className="text-sm font-sans tracking-wider uppercase transition-colors font-normal text-[#412c0b] hover:text-[#AD4F21]">
               About
             </a>
           </div>
