@@ -35,7 +35,7 @@ const Newsletter = () => {
               </label>
               <div className="flex flex-col sm:flex-row gap-3">
                 <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="receive daily disappointments" className="flex-1 px-4 py-3 bg-background border border-border text-sm font-sans placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" required />
-                <button type="submit" className="px-6 py-3 text-primary-foreground text-sm font-sans font-medium tracking-wider uppercase hover:bg-burnt-orange-dark transition-colors duration-300 bg-[#ab4f21]">
+                <button type="submit" className="px-6 py-3 text-primary-foreground text-sm font-sans font-medium tracking-wider uppercase hover:bg-[#8a3f1a] transition-colors duration-300 bg-[#ab4f21]">
                   Subscribe
                 </button>
               </div>
