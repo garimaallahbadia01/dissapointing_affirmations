@@ -13,19 +13,19 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#merch" className="text-sm font-sans tracking-wider uppercase transition-colors font-normal text-[#412c0b] hover:text-[#AD4F21]">
+            <a href="#merch" className="text-sm font-sans tracking-[0.1em] uppercase transition-colors font-normal text-[#412c0b] hover:text-[#AD4F21]">
               Merch
             </a>
-            <a href="#custom-card" className="text-sm font-sans tracking-wider uppercase transition-colors font-normal text-[#412c0b] hover:text-[#AD4F21]">
+            <a href="#custom-card" className="text-sm font-sans tracking-[0.1em] uppercase transition-colors font-normal text-[#412c0b] hover:text-[#AD4F21]">
               Custom Card
             </a>
-            <a href="#about" className="text-sm font-sans tracking-wider uppercase transition-colors font-normal text-[#412c0b] hover:text-[#AD4F21]">
+            <a href="#about" className="text-sm font-sans tracking-[0.1em] uppercase transition-colors font-normal text-[#412c0b] hover:text-[#AD4F21]">
               About
             </a>
           </div>
 
           {/* Contact Button */}
-          <button className="hidden md:block px-5 py-2 border-[#412d0b] text-[#412d0b] text-sm font-sans font-medium tracking-wider uppercase hover:bg-[#9e532e] hover:border-[#9e532e] hover:text-background transition-all duration-300 bg-transparent border">
+          <button className="hidden md:block px-5 py-2 border-[#412d0b] text-[#412d0b] text-sm font-sans font-medium tracking-[0.1em] uppercase hover:bg-[#9e532e] hover:border-[#9e532e] hover:text-background transition-all duration-300 bg-transparent border">
             Contact Us
           </button>
 
@@ -37,16 +37,16 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && <div className="md:hidden mt-4 pb-4 border-t border-border pt-4 space-y-4">
-            <a href="#merch" className="block text-sm font-sans font-medium tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#merch" className="block text-sm font-sans font-medium tracking-[0.1em] uppercase text-muted-foreground hover:text-foreground transition-colors">
               Merch
             </a>
-            <a href="#custom-card" className="block text-sm font-sans font-medium tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#custom-card" className="block text-sm font-sans font-medium tracking-[0.1em] uppercase text-muted-foreground hover:text-foreground transition-colors">
               Custom Card
             </a>
-            <a href="#about" className="block text-sm font-sans font-medium tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors">
+            <a href="#about" className="block text-sm font-sans font-medium tracking-[0.1em] uppercase text-muted-foreground hover:text-foreground transition-colors">
               About
             </a>
-            <button className="w-full px-5 py-2 border border-foreground text-sm font-sans font-medium tracking-wider uppercase hover:bg-foreground hover:text-background transition-all duration-300">
+            <button className="w-full px-5 py-2 border border-foreground text-sm font-sans font-medium tracking-[0.1em] uppercase hover:bg-foreground hover:text-background transition-all duration-300">
               Contact Us
             </button>
           </div>}

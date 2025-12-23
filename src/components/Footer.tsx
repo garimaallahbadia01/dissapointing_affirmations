@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-12 gap-8 md:gap-12">
           {/* Navigation Column */}
           <div className="col-span-1 md:col-span-2">
-            <h4 className="text-xs font-sans font-medium tracking-widest uppercase text-warm-white/60 mb-4">
+            <h4 className="text-xs font-sans font-medium tracking-[0.1em] uppercase text-warm-white/60 mb-4">
               Navigation
             </h4>
             <ul className="space-y-2">
@@ -36,7 +36,7 @@ const Footer = () => {
 
           {/* About Column */}
           <div className="col-span-1 md:col-span-2">
-            <h4 className="text-xs font-sans font-medium tracking-widest uppercase text-warm-white/60 mb-4">
+            <h4 className="text-xs font-sans font-medium tracking-[0.1em] uppercase text-warm-white/60 mb-4">
               About
             </h4>
             <ul className="space-y-2">
@@ -65,7 +65,7 @@ const Footer = () => {
 
           {/* Connect Column */}
           <div className="col-span-2 md:col-span-2">
-            <h4 className="text-xs font-sans font-medium tracking-widest uppercase text-warm-white/60 mb-4">
+            <h4 className="text-xs font-sans font-medium tracking-[0.1em] uppercase text-warm-white/60 mb-4">
               Connect With Us
             </h4>
             <ul className="space-y-2">
