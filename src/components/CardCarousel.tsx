@@ -85,7 +85,7 @@ const CardCarousel = () => {
         {/* Cards Container with Navigation */}
         <div className="relative flex items-center justify-center">
           {/* Navigation Arrows - positioned absolutely outside the card stack */}
-          <button onClick={prevCard} className="absolute left-0 md:left-4 lg:left-8 z-40 w-12 h-12 rounded-full border border-[#AD4F21]/30 bg-background/80 backdrop-blur-sm flex items-center justify-center text-[#AD4F21] hover:bg-[#AD4F21] hover:text-primary-foreground transition-all duration-300" aria-label="Previous card">
+          <button onClick={prevCard} className="absolute left-0 md:left-4 lg:left-8 z-40 w-12 h-12 rounded-full border border-[#412d0b]/30 bg-background/80 backdrop-blur-sm flex items-center justify-center text-[#412d0b] hover:bg-[#412d0b] hover:text-primary-foreground transition-all duration-300" aria-label="Previous card">
             <ArrowLeft size={20} />
           </button>
 
@@ -121,7 +121,7 @@ const CardCarousel = () => {
               </div>)}
           </div>
 
-          <button onClick={nextCard} className="absolute right-0 md:right-4 lg:right-8 z-40 w-12 h-12 rounded-full border border-[#AD4F21]/30 bg-background/80 backdrop-blur-sm flex items-center justify-center text-[#AD4F21] hover:bg-[#AD4F21] hover:text-primary-foreground transition-all duration-300" aria-label="Next card">
+          <button onClick={nextCard} className="absolute right-0 md:right-4 lg:right-8 z-40 w-12 h-12 rounded-full border border-[#412d0b]/30 bg-background/80 backdrop-blur-sm flex items-center justify-center text-[#412d0b] hover:bg-[#412d0b] hover:text-primary-foreground transition-all duration-300" aria-label="Next card">
             <ArrowRight size={20} />
           </button>
         </div>
