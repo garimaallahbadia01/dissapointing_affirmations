@@ -25,7 +25,7 @@ const Navigation = () => {
           </div>
 
           {/* Contact Button */}
-          <button className="hidden md:block px-5 py-2 border-2 border-[#412d0b] text-[#412d0b] text-sm font-sans font-medium tracking-wider uppercase hover:bg-[#9e532e] hover:border-[#9e532e] hover:text-background transition-all duration-300 bg-transparent">
+          <button className="hidden md:block px-5 py-2 border-[#412d0b] text-[#412d0b] text-sm font-sans font-medium tracking-wider uppercase hover:bg-[#9e532e] hover:border-[#9e532e] hover:text-background transition-all duration-300 bg-transparent border">
             Contact Us
           </button>
 
