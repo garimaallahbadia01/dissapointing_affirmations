@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { toast } from 'sonner';
 import newsletterAngels from '@/assets/newsletter-angels.png';
 import newsletterLandscape from '@/assets/newsletter-landscape.png';
-import footerVermeer from '@/assets/footer-vermeer.jpg';
+import logo from '@/assets/logo.png';
 const Newsletter = () => {
   const [email, setEmail] = useState('');
   const handleSubmit = (e: React.FormEvent) => {
@@ -46,14 +46,8 @@ const Newsletter = () => {
           <div className="lg:col-span-4 relative min-h-[300px]">
             <img src={newsletterLandscape} alt="Renaissance landscape" className="w-full h-full object-cover" />
             <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
-              {/* Small portrait image */}
-              <div className="absolute top-6 left-6 w-16 h-16 rounded-sm overflow-hidden border-2 border-warm-white/20">
-                
-              </div>
-
-              <p className="text-xs font-sans tracking-widest uppercase text-warm-white/80 mb-2">
-                Deflated Affirmations
-              </p>
+              {/* Logo */}
+              <img src={logo} alt="Deflated Affirmations logo" className="h-6 mb-2" />
               <p className="font-display italic text-xl md:text-2xl text-warm-white leading-relaxed">
                 We are all just doing our mediocre best.
               </p>
