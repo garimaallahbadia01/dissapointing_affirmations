@@ -82,20 +82,20 @@ const CardCarousel = () => {
   };
   return <section className="py-16 md:py-24 px-6 bg-background">
       <div className="max-w-4xl mx-auto">
-        {/* Cards Container */}
-        <div className="relative h-[450px] md:h-[550px] flex items-center justify-center">
+        {/* Cards Container with Navigation */}
+        <div className="relative flex items-center justify-center">
           {/* Navigation Arrows */}
-          <button onClick={prevCard} className="absolute left-0 md:left-8 z-40 w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300" aria-label="Previous card">
+          <button onClick={prevCard} className="flex-shrink-0 z-40 w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300" aria-label="Previous card">
             <ArrowLeft size={20} />
           </button>
 
-          <button onClick={nextCard} className="absolute right-0 md:right-8 z-40 w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300" aria-label="Next card">
-            <ArrowRight size={20} />
-          </button>
-
           {/* Cards */}
-          <div className="relative w-72 md:w-80 lg:w-96">
-            {cards.map((card, index) => <div key={card.id} className="absolute inset-0 transition-all duration-500 ease-out perspective-1000" style={getCardStyle(index)}>
+          <div className="relative w-72 md:w-80 lg:w-96 mx-8 md:mx-16">
+            {cards.map((card, index) => <div key={card.id} className="transition-all duration-500 ease-out perspective-1000" style={{
+              ...getCardStyle(index),
+              position: index === currentIndex ? 'relative' : 'absolute',
+              inset: index === currentIndex ? undefined : 0
+            }}>
                 <div className={`relative w-full preserve-3d transition-transform duration-700 ${flippedCards.has(index) ? 'rotate-y-180' : ''}`}>
                   {/* Front */}
                   <div className="backface-hidden rounded-xl overflow-hidden shadow-2xl">
@@ -111,6 +111,10 @@ const CardCarousel = () => {
                 </div>
               </div>)}
           </div>
+
+          <button onClick={nextCard} className="flex-shrink-0 z-40 w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300" aria-label="Next card">
+            <ArrowRight size={20} />
+          </button>
         </div>
 
         {/* Flip Button */}
