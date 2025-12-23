@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { ArrowLeft, ArrowRight, RotateCw } from 'lucide-react';
-import cardBubblegum from '@/assets/card-bubblegum.jpg';
-import cardSunflower from '@/assets/card-sunflower.jpg';
-import cardMirror from '@/assets/card-mirror.jpg';
+import cardSunflower from '@/assets/card-sunflower.png';
+import cardMirror from '@/assets/card-mirror.png';
+import cardWine from '@/assets/card-wine.png';
 
 interface Card {
   id: number;
@@ -13,23 +13,23 @@ interface Card {
 const cards: Card[] = [
   {
     id: 1,
-    frontImage: cardBubblegum,
-    backText: "Your potential is as fleeting as that bubble you're blowing.",
+    frontImage: cardSunflower,
+    backText: "Your potential is as fleeting as that bubble you are blowing.",
   },
   {
     id: 2,
-    frontImage: cardSunflower,
-    backText: "Even sunflowers wilt. So will your enthusiasm.",
+    frontImage: cardMirror,
+    backText: "The mirror does not lie. But maybe you should.",
   },
   {
     id: 3,
-    frontImage: cardMirror,
-    backText: "The mirror doesn't lie. But maybe you should.",
+    frontImage: cardWine,
+    backText: "Wine helps. But not that much.",
   },
 ];
 
 const CardCarousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(1);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [flippedCards, setFlippedCards] = useState<Set<number>>(new Set());
 
   const getCardStyle = (index: number) => {
@@ -43,13 +43,13 @@ const CardCarousel = () => {
       };
     } else if (diff === -1 || (currentIndex === 0 && index === cards.length - 1)) {
       return {
-        transform: 'translateX(-60%) rotate(-12deg) scale(0.85)',
+        transform: 'translateX(-55%) rotate(-8deg) scale(0.9)',
         zIndex: 20,
         opacity: 1,
       };
     } else if (diff === 1 || (currentIndex === cards.length - 1 && index === 0)) {
       return {
-        transform: 'translateX(60%) rotate(12deg) scale(0.85)',
+        transform: 'translateX(55%) rotate(8deg) scale(0.9)',
         zIndex: 20,
         opacity: 1,
       };
@@ -88,7 +88,7 @@ const CardCarousel = () => {
     <section className="py-16 md:py-24 px-6 bg-background">
       <div className="max-w-4xl mx-auto">
         {/* Cards Container */}
-        <div className="relative h-[400px] md:h-[500px] flex items-center justify-center">
+        <div className="relative h-[450px] md:h-[550px] flex items-center justify-center">
           {/* Navigation Arrows */}
           <button
             onClick={prevCard}
@@ -107,7 +107,7 @@ const CardCarousel = () => {
           </button>
 
           {/* Cards */}
-          <div className="relative w-56 md:w-64 h-80 md:h-96">
+          <div className="relative w-52 md:w-64 h-72 md:h-[420px]">
             {cards.map((card, index) => (
               <div
                 key={card.id}
@@ -120,30 +120,18 @@ const CardCarousel = () => {
                   }`}
                 >
                   {/* Front */}
-                  <div className="absolute inset-0 backface-hidden rounded-lg overflow-hidden shadow-2xl">
+                  <div className="absolute inset-0 backface-hidden rounded-xl overflow-hidden shadow-2xl">
                     <img
                       src={card.frontImage}
                       alt="Affirmation card"
                       className="w-full h-full object-cover"
                     />
-                    {/* Badge */}
-                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-charcoal flex items-center justify-center">
-                      <div className="text-center">
-                        <span className="text-[6px] text-warm-white uppercase tracking-wider block leading-tight">
-                          Unmotivated
-                        </span>
-                        <div className="w-8 h-[1px] bg-warm-white/40 mx-auto my-0.5" />
-                        <span className="text-[6px] text-warm-white uppercase tracking-wider block leading-tight">
-                          Deflated
-                        </span>
-                      </div>
-                    </div>
                   </div>
 
                   {/* Back */}
-                  <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-lg bg-charcoal flex items-center justify-center p-6 shadow-2xl">
-                    <p className="font-display italic text-lg text-warm-white text-center leading-relaxed">
-                      "{card.backText}"
+                  <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-xl bg-charcoal flex items-center justify-center p-6 shadow-2xl">
+                    <p className="font-display italic text-lg md:text-xl text-warm-white text-center leading-relaxed">
+                      &ldquo;{card.backText}&rdquo;
                     </p>
                   </div>
                 </div>

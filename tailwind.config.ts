@@ -14,9 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['"Playfair Display"', 'serif'],
+        display: ['"Cormorant Garamond"', 'serif'],
         serif: ['"Cormorant Garamond"', 'serif'],
-        sans: ['"DM Sans"', 'sans-serif'],
+        sans: ['"Inter Tight"', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { toast } from 'sonner';
-import newsletterLeft from '@/assets/newsletter-left.jpg';
-import newsletterRight from '@/assets/newsletter-right.jpg';
+import newsletterAngels from '@/assets/newsletter-angels.png';
+import newsletterLandscape from '@/assets/newsletter-landscape.png';
 import footerVermeer from '@/assets/footer-vermeer.jpg';
 
 const Newsletter = () => {
@@ -22,8 +22,8 @@ const Newsletter = () => {
           {/* Left Image */}
           <div className="hidden lg:block lg:col-span-3">
             <img
-              src={newsletterLeft}
-              alt="Renaissance painting"
+              src={newsletterAngels}
+              alt="Angels with laptop"
               className="w-full h-full object-cover"
             />
           </div>
@@ -63,11 +63,11 @@ const Newsletter = () => {
           {/* Right Image with Overlay */}
           <div className="lg:col-span-4 relative min-h-[300px]">
             <img
-              src={newsletterRight}
+              src={newsletterLandscape}
               alt="Renaissance landscape"
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-olive/85 flex flex-col justify-end p-6 md:p-8">
+            <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
               {/* Small portrait image */}
               <div className="absolute top-6 left-6 w-16 h-16 rounded-sm overflow-hidden border-2 border-warm-white/20">
                 <img
@@ -77,11 +77,11 @@ const Newsletter = () => {
                 />
               </div>
 
-              <p className="text-xs font-sans tracking-widest uppercase text-warm-white/60 mb-2">
+              <p className="text-xs font-sans tracking-widest uppercase text-warm-white/80 mb-2">
                 Deflated Affirmations
               </p>
               <p className="font-display italic text-xl md:text-2xl text-warm-white leading-relaxed">
-                We're all just doing our mediocre best.
+                We are all just doing our mediocre best.
               </p>
             </div>
           </div>

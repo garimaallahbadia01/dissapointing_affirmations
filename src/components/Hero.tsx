@@ -1,18 +1,35 @@
-import { Mouse } from 'lucide-react';
-import heroImage from '@/assets/hero-angels.jpg';
+import heroSky from '@/assets/hero-sky.png';
+import angelLeft from '@/assets/angel-left.png';
+import angelRight from '@/assets/angel-right.png';
 
 const Hero = () => {
   return (
     <section className="relative w-full h-[70vh] min-h-[500px] overflow-hidden">
-      {/* Background Image */}
+      {/* Background Sky */}
       <div className="absolute inset-0">
         <img 
-          src={heroImage} 
-          alt="Renaissance angels on clouds with rainbow" 
+          src={heroSky} 
+          alt="Renaissance sky with rainbow" 
           className="w-full h-full object-cover object-center"
         />
-        {/* Subtle overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/20" />
+      </div>
+
+      {/* Left Angel */}
+      <div className="absolute left-0 bottom-0 w-[35%] md:w-[30%] h-full pointer-events-none">
+        <img 
+          src={angelLeft} 
+          alt="Angel with coffee" 
+          className="absolute bottom-0 left-0 w-full h-auto max-h-full object-contain object-bottom"
+        />
+      </div>
+
+      {/* Right Angel */}
+      <div className="absolute right-0 bottom-0 w-[35%] md:w-[30%] h-full pointer-events-none">
+        <img 
+          src={angelRight} 
+          alt="Angel with scroll" 
+          className="absolute bottom-0 right-0 w-full h-auto max-h-full object-contain object-bottom"
+        />
       </div>
 
       {/* Content */}
