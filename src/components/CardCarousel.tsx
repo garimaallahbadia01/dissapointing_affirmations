@@ -80,17 +80,17 @@ const CardCarousel = () => {
       return newSet;
     });
   };
-  return <section className="py-16 md:py-24 px-6 bg-background">
-      <div className="max-w-4xl mx-auto">
+  return <section className="py-16 md:py-24 px-6 bg-background overflow-hidden">
+      <div className="max-w-6xl mx-auto">
         {/* Cards Container with Navigation */}
         <div className="relative flex items-center justify-center">
-          {/* Navigation Arrows */}
-          <button onClick={prevCard} className="flex-shrink-0 z-40 w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300" aria-label="Previous card">
+          {/* Navigation Arrows - positioned absolutely outside the card stack */}
+          <button onClick={prevCard} className="absolute left-0 md:left-4 lg:left-8 z-40 w-12 h-12 rounded-full border border-primary/30 bg-background/80 backdrop-blur-sm flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300" aria-label="Previous card">
             <ArrowLeft size={20} />
           </button>
 
           {/* Cards */}
-          <div className="relative w-72 md:w-80 lg:w-96 mx-8 md:mx-16">
+          <div className="relative w-72 md:w-80 lg:w-96 mx-16 md:mx-24 lg:mx-32">
             {cards.map((card, index) => <div key={card.id} className="transition-all duration-500 ease-out perspective-1000" style={{
               ...getCardStyle(index),
               position: index === currentIndex ? 'relative' : 'absolute',
@@ -112,7 +112,7 @@ const CardCarousel = () => {
               </div>)}
           </div>
 
-          <button onClick={nextCard} className="flex-shrink-0 z-40 w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300" aria-label="Next card">
+          <button onClick={nextCard} className="absolute right-0 md:right-4 lg:right-8 z-40 w-12 h-12 rounded-full border border-primary/30 bg-background/80 backdrop-blur-sm flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300" aria-label="Next card">
             <ArrowRight size={20} />
           </button>
         </div>
