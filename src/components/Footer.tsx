@@ -100,7 +100,7 @@ const Footer = () => {
                 <img alt="Vermeer style portrait" src="/lovable-uploads/43b96dc9-edd4-4990-bdb6-0f6e39aab1f2.png" className="w-full h-full object-contain" />
               </div>
               <div className="text-right">
-                <p className="font-display italic text-lg md:text-xl text-warm-white leading-relaxed mb-2">
+                <p className="font-display italic text-lg md:text-xl text-warm-white leading-relaxed mb-2 text-center">
                   All systems are<br />functioning normally
                 </p>
                 <a href="#" className="text-xs font-sans hover:text-burnt-orange-light transition-colors inline-flex items-center gap-1 text-primary-foreground">
