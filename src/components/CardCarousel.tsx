@@ -17,28 +17,28 @@ interface Card {
 const cards: Card[] = [{
   id: 1,
   frontImage: cardSunflower,
-  backQuote: "You are loved.",
-  backPunchline: "By your mother. Who is contractually obligated."
-}, {
-  id: 2,
-  frontImage: cardMirror,
-  backQuote: "Follow your dreams.",
-  backPunchline: "They're running away for a reason. Take the hint."
-}, {
-  id: 3,
-  frontImage: cardWine,
   backQuote: "You've got this.",
   backPunchline: "You don't. But the confidence is endearing."
 }, {
-  id: 4,
-  frontImage: cardHeadphones,
+  id: 2,
+  frontImage: cardMirror,
+  backQuote: "You are loved.",
+  backPunchline: "By your mother. Who is contractually obligated."
+}, {
+  id: 3,
+  frontImage: cardWine,
   backQuote: "The best is yet to come.",
   backPunchline: "Statistically unlikely, but we admire your optimism."
 }, {
-  id: 5,
-  frontImage: cardBus,
+  id: 4,
+  frontImage: cardHeadphones,
   backQuote: "What doesn't kill you makes you stronger.",
   backPunchline: "Your life choices are really testing this theory."
+}, {
+  id: 5,
+  frontImage: cardBus,
+  backQuote: "Follow your dreams.",
+  backPunchline: "They're running away for a reason. Take the hint."
 }];
 const CardCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
