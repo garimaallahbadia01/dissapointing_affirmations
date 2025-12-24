@@ -17,8 +17,8 @@ interface Card {
 const cards: Card[] = [{
   id: 1,
   frontImage: cardSunflower,
-  backQuote: "You've got this.",
-  backPunchline: "You don't. But the confidence is endearing."
+  backQuote: "The best is yet to come.",
+  backPunchline: "Statistically unlikely, but we admire your optimism."
 }, {
   id: 2,
   frontImage: cardMirror,
@@ -27,13 +27,13 @@ const cards: Card[] = [{
 }, {
   id: 3,
   frontImage: cardWine,
-  backQuote: "The best is yet to come.",
-  backPunchline: "Statistically unlikely, but we admire your optimism."
+  backQuote: "What doesn't kill you makes you stronger.",
+  backPunchline: "Your life choices are really testing this theory."
 }, {
   id: 4,
   frontImage: cardHeadphones,
-  backQuote: "What doesn't kill you makes you stronger.",
-  backPunchline: "Your life choices are really testing this theory."
+  backQuote: "You've got this.",
+  backPunchline: "You don't. But the confidence is endearing."
 }, {
   id: 5,
   frontImage: cardBus,
