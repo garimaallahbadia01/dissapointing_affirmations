@@ -101,7 +101,7 @@ const Footer = () => {
               className="absolute inset-0 w-full h-full object-cover object-left z-0" 
             />
             {/* Text Overlay */}
-            <div className="absolute inset-0 z-10 flex flex-col justify-center items-end text-right p-2 sm:p-3 md:p-4 lg:p-6">
+            <div className="absolute inset-0 z-10 flex flex-col justify-center items-start text-left p-2 sm:p-3 md:p-4 lg:p-6">
               <p className="font-display italic text-xs sm:text-sm md:text-base lg:text-xl text-warm-white leading-snug mb-1 sm:mb-1.5 md:mb-2">
                 All systems are<br />functioning normally
               </p>
