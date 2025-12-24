@@ -30,7 +30,7 @@ const Newsletter = () => {
 
             {/* Center Content */}
             <div className="flex-1 bg-cream-dark p-5 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-center">
-              <h2 className="italic text-lg sm:text-xl md:text-[1.75rem] lg:text-3xl text-foreground leading-snug sm:leading-relaxed mb-2 sm:mb-3 md:mb-4 font-semibold font-serif">
+              <h2 className="italic text-lg sm:text-xl md:text-[1.75rem] text-foreground leading-snug sm:leading-relaxed mb-2 sm:mb-3 md:mb-4 font-semibold font-serif lg:text-4xl">
                 The ancients foretold thy struggles
               </h2>
               <p className="font-sans text-xs sm:text-sm md:text-base text-muted-foreground mb-4 sm:mb-5 md:mb-6">
