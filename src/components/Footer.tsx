@@ -4,9 +4,9 @@ const Footer = () => {
   return (
     <footer className="text-warm-white bg-burnt-orange">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-12 md:py-16">
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-12 gap-6 sm:gap-8 md:gap-12">
+        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-12 gap-6 sm:gap-4 md:gap-6 lg:gap-8">
           {/* Navigation Column */}
-          <div className="col-span-1 md:col-span-2">
+          <div className="col-span-1 sm:col-span-1 md:col-span-2">
             <h4 className="text-[10px] sm:text-xs font-sans font-medium tracking-widest uppercase text-warm-white/60 mb-3 sm:mb-4">
               Navigation
             </h4>
@@ -35,7 +35,7 @@ const Footer = () => {
           </div>
 
           {/* About Column */}
-          <div className="col-span-1 md:col-span-2">
+          <div className="col-span-1 sm:col-span-1 md:col-span-2">
             <h4 className="text-[10px] sm:text-xs font-sans font-medium tracking-widest uppercase text-warm-white/60 mb-3 sm:mb-4">
               About
             </h4>
@@ -64,7 +64,7 @@ const Footer = () => {
           </div>
 
           {/* Connect Column */}
-          <div className="col-span-2 sm:col-span-1 md:col-span-2">
+          <div className="col-span-1 sm:col-span-1 md:col-span-2">
             <h4 className="text-[10px] sm:text-xs font-sans font-medium tracking-widest uppercase text-warm-white/60 mb-3 sm:mb-4">
               Connect With Us
             </h4>
@@ -92,21 +92,21 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Image and Status Card */}
-          <div className="col-span-2 sm:col-span-3 md:col-span-6 relative rounded-lg overflow-hidden h-28 sm:h-32 md:h-40 lg:h-48">
+          {/* Image and Status Card - aligned with top of columns */}
+          <div className="col-span-1 sm:col-span-1 md:col-span-6 relative rounded-lg overflow-hidden h-24 sm:h-28 md:h-32 lg:h-36 self-start">
             {/* Background Image */}
             <img 
               alt="Vermeer style portrait" 
               src="/lovable-uploads/43b96dc9-edd4-4990-bdb6-0f6e39aab1f2.png" 
               className="absolute inset-0 w-full h-full object-cover object-left z-0" 
             />
-            {/* Text Overlay - higher z-index */}
-            <div className="absolute inset-0 z-10 flex flex-col justify-center items-end text-right p-3 sm:p-4 md:p-6 lg:p-8">
-              <p className="font-display italic text-sm sm:text-base md:text-lg lg:text-2xl text-warm-white leading-snug mb-1.5 sm:mb-2 md:mb-3">
+            {/* Text Overlay */}
+            <div className="absolute inset-0 z-10 flex flex-col justify-center items-end text-right p-2 sm:p-3 md:p-4 lg:p-6">
+              <p className="font-display italic text-xs sm:text-sm md:text-base lg:text-xl text-warm-white leading-snug mb-1 sm:mb-1.5 md:mb-2">
                 All systems are<br />functioning normally
               </p>
-              <a href="#" className="text-[9px] sm:text-[10px] md:text-xs font-sans text-warm-white/80 hover:text-warm-white transition-colors inline-flex items-center gap-1">
-                Check back later for updates
+              <a href="#" className="text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs font-sans text-warm-white/80 hover:text-warm-white transition-colors inline-flex items-center gap-0.5 sm:gap-1">
+                Check back later
                 <span>→</span>
               </a>
             </div>

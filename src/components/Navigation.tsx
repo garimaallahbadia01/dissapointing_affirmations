@@ -40,33 +40,39 @@ const Navigation = () => {
           </button>
         </div>
 
-        {/* Mobile/Tablet Menu */}
+        {/* Mobile/Tablet Menu - cleaner layout */}
         {isMenuOpen && (
-          <div className="lg:hidden mt-3 pb-4 border-t border-border pt-4 space-y-3">
-            <a 
-              href="#merch" 
-              className="block text-xs sm:text-sm font-sans font-medium tracking-[0.1em] uppercase text-[#412c0b] hover:text-[#AD4F21] transition-colors py-1"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Merch
-            </a>
-            <a 
-              href="#custom-card" 
-              className="block text-xs sm:text-sm font-sans font-medium tracking-[0.1em] uppercase text-[#412c0b] hover:text-[#AD4F21] transition-colors py-1"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Custom Card
-            </a>
-            <a 
-              href="#about" 
-              className="block text-xs sm:text-sm font-sans font-medium tracking-[0.1em] uppercase text-[#412c0b] hover:text-[#AD4F21] transition-colors py-1"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              About
-            </a>
-            <button className="w-full mt-2 px-5 py-2.5 bg-burnt-orange text-primary-foreground text-xs sm:text-sm font-sans font-medium tracking-[0.1em] uppercase hover:bg-burnt-orange-dark transition-all duration-300">
-              Contact Us
-            </button>
+          <div className="lg:hidden mt-3 pb-4 border-t border-border pt-4">
+            <div className="flex flex-wrap gap-x-6 gap-y-3">
+              <a 
+                href="#merch" 
+                className="text-xs sm:text-sm font-sans font-medium tracking-[0.1em] uppercase text-[#412c0b] hover:text-[#AD4F21] transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Merch
+              </a>
+              <a 
+                href="#custom-card" 
+                className="text-xs sm:text-sm font-sans font-medium tracking-[0.1em] uppercase text-[#412c0b] hover:text-[#AD4F21] transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Custom Card
+              </a>
+              <a 
+                href="#about" 
+                className="text-xs sm:text-sm font-sans font-medium tracking-[0.1em] uppercase text-[#412c0b] hover:text-[#AD4F21] transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About
+              </a>
+              <a 
+                href="#contact" 
+                className="text-xs sm:text-sm font-sans font-medium tracking-[0.1em] uppercase text-[#412c0b] hover:text-[#AD4F21] transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact Us
+              </a>
+            </div>
           </div>
         )}
       </div>

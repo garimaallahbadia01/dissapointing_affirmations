@@ -39,9 +39,8 @@ const Newsletter = () => {
 
             {/* Center Content */}
             <div className="flex-1 bg-cream-dark p-5 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-center">
-              <h2 className="italic text-lg sm:text-xl md:text-2xl lg:text-3xl text-foreground leading-snug sm:leading-relaxed mb-2 sm:mb-3 md:mb-4 font-semibold font-serif">
-                The ancients foretold<br className="hidden sm:block" />
-                <span className="sm:hidden"> </span>thy struggles
+              <h2 className="italic text-lg sm:text-xl md:text-[1.75rem] lg:text-3xl text-foreground leading-snug sm:leading-relaxed mb-2 sm:mb-3 md:mb-4 font-semibold font-serif">
+                The ancients foretold thy struggles
               </h2>
               <p className="font-sans text-xs sm:text-sm md:text-base text-muted-foreground mb-4 sm:mb-5 md:mb-6">
                 Receive their wisdom weekly in your inbox.
@@ -81,11 +80,11 @@ const Newsletter = () => {
                 draggable={false}
               />
             </div>
-            <div className="absolute inset-0 flex flex-col justify-end p-3 sm:p-4 lg:p-6">
-              <p className="text-[9px] sm:text-[10px] md:text-xs font-sans tracking-widest uppercase text-warm-white/80 mb-0.5 sm:mb-1">
+            <div className="absolute inset-0 flex flex-col justify-between p-3 sm:p-4 lg:p-6">
+              <p className="text-[9px] sm:text-[10px] md:text-xs font-sans tracking-widest uppercase text-warm-white/80">
                 Deflated Affirmations
               </p>
-              <p className="font-display italic text-sm sm:text-base lg:text-xl text-warm-white leading-snug">
+              <p className="font-display italic text-base sm:text-lg md:text-xl lg:text-2xl text-warm-white leading-snug">
                 We are all just doing our mediocre best.
               </p>
             </div>
