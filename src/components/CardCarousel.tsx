@@ -93,7 +93,7 @@ const CardCarousel = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section className="py-16 md:py-24 px-6 bg-background overflow-hidden">
+    <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 bg-background overflow-hidden">
       <div 
         ref={ref}
         className={`max-w-6xl mx-auto transition-all duration-700 ease-out ${
@@ -105,12 +105,12 @@ const CardCarousel = () => {
         {/* Cards Container with Navigation */}
         <div className="relative flex items-center justify-center">
           {/* Navigation Arrows - positioned absolutely outside the card stack */}
-          <button onClick={prevCard} className="absolute left-0 md:left-4 lg:left-8 z-40 w-12 h-12 rounded-full border border-[#412d0b]/30 bg-background/80 backdrop-blur-sm flex items-center justify-center text-[#412d0b] hover:bg-[#412d0b] hover:text-primary-foreground transition-all duration-300" aria-label="Previous card">
-            <ArrowLeft size={20} />
+          <button onClick={prevCard} className="absolute left-0 sm:left-2 md:left-4 lg:left-8 z-40 w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-[#412d0b]/30 bg-background/80 backdrop-blur-sm flex items-center justify-center text-[#412d0b] hover:bg-[#412d0b] hover:text-primary-foreground transition-all duration-300" aria-label="Previous card">
+            <ArrowLeft size={18} className="sm:w-5 sm:h-5" />
           </button>
 
           {/* Cards */}
-          <div className="relative w-72 md:w-80 lg:w-96 mx-16 md:mx-24 lg:mx-32">
+          <div className="relative w-56 sm:w-72 md:w-80 lg:w-96 mx-12 sm:mx-16 md:mx-24 lg:mx-32">
             {cards.map((card, index) => <div 
               key={card.id} 
               className="transition-all duration-500 ease-out perspective-1000 cursor-pointer" 
@@ -134,11 +134,11 @@ const CardCarousel = () => {
                   {/* Back */}
                   <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-xl overflow-hidden shadow-2xl">
                     <img src={cardBackTemplate} alt="Card back" className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 flex flex-col items-center justify-center p-8 md:p-10">
-                      <h3 className="font-display italic text-2xl md:text-3xl text-charcoal text-center leading-tight mb-4">
+                    <div className="absolute inset-0 flex flex-col items-center justify-center p-6 sm:p-8 md:p-10">
+                      <h3 className="font-display italic text-xl sm:text-2xl md:text-3xl text-charcoal text-center leading-tight mb-3 sm:mb-4">
                         {card.backQuote}
                       </h3>
-                      <p className="font-sans text-sm md:text-base text-charcoal/80 text-center leading-relaxed max-w-[80%]">
+                      <p className="font-sans text-xs sm:text-sm md:text-base text-charcoal/80 text-center leading-relaxed max-w-[85%] sm:max-w-[80%]">
                         {card.backPunchline}
                       </p>
                     </div>
@@ -147,15 +147,15 @@ const CardCarousel = () => {
               </div>)}
           </div>
 
-          <button onClick={nextCard} className="absolute right-0 md:right-4 lg:right-8 z-40 w-12 h-12 rounded-full border border-[#412d0b]/30 bg-background/80 backdrop-blur-sm flex items-center justify-center text-[#412d0b] hover:bg-[#412d0b] hover:text-primary-foreground transition-all duration-300" aria-label="Next card">
-            <ArrowRight size={20} />
+          <button onClick={nextCard} className="absolute right-0 sm:right-2 md:right-4 lg:right-8 z-40 w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-[#412d0b]/30 bg-background/80 backdrop-blur-sm flex items-center justify-center text-[#412d0b] hover:bg-[#412d0b] hover:text-primary-foreground transition-all duration-300" aria-label="Next card">
+            <ArrowRight size={18} className="sm:w-5 sm:h-5" />
           </button>
         </div>
 
         {/* Flip Button */}
-        <div className="flex justify-center mt-8">
-          <button onClick={flipCard} className="flex items-center gap-2 px-6 py-3 text-primary-foreground font-sans text-sm font-medium tracking-[0.1em] uppercase hover:bg-burnt-orange-dark transition-colors duration-300 bg-burnt-orange">
-            <RotateCw size={16} />
+        <div className="flex justify-center mt-6 sm:mt-8">
+          <button onClick={flipCard} className="flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 text-primary-foreground font-sans text-xs sm:text-sm font-medium tracking-[0.1em] uppercase hover:bg-burnt-orange-dark transition-colors duration-300 bg-burnt-orange">
+            <RotateCw size={14} className="sm:w-4 sm:h-4" />
             Flip Card
           </button>
         </div>
