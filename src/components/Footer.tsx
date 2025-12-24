@@ -92,24 +92,35 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Image and Status Card - aligned with top of columns */}
-          <div className="col-span-1 sm:col-span-1 md:col-span-6 relative rounded-lg overflow-hidden h-24 sm:h-28 md:h-32 lg:h-36 self-start">
+          {/* Image and Status Card - hidden on mobile, visible on sm+ */}
+          <div className="hidden sm:block col-span-1 md:col-span-6 relative rounded-lg overflow-hidden h-28 md:h-32 lg:h-36 self-start">
             {/* Background Image */}
             <img 
               alt="Vermeer style portrait" 
               src="/lovable-uploads/43b96dc9-edd4-4990-bdb6-0f6e39aab1f2.png" 
               className="absolute inset-0 w-full h-full object-cover object-left z-0" 
             />
-            {/* Text Overlay */}
-            <div className="absolute inset-0 z-10 flex flex-col justify-center items-center text-center p-2 sm:p-3 md:p-4 lg:p-6 pl-[35%] sm:pl-[40%]">
-              <p className="font-display italic text-xs sm:text-sm md:text-base lg:text-xl text-warm-white leading-snug mb-1 sm:mb-1.5 md:mb-2">
+            {/* Text Overlay - aligned right */}
+            <div className="absolute inset-0 z-10 flex flex-col justify-center items-end text-right p-3 md:p-4 lg:p-6 pr-4 sm:pr-6 md:pr-8">
+              <p className="font-display italic text-sm md:text-base lg:text-xl text-warm-white leading-snug mb-1 sm:mb-1.5 md:mb-2">
                 All systems are<br />functioning normally
               </p>
-              <a href="#" className="text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs font-sans text-warm-white/80 hover:text-warm-white transition-colors inline-flex items-center gap-0.5 sm:gap-1">
+              <a href="#" className="text-[9px] md:text-[10px] lg:text-xs font-sans text-warm-white/80 hover:text-warm-white transition-colors inline-flex items-center gap-0.5 sm:gap-1">
                 Check back later for updates
                 <span>→</span>
               </a>
             </div>
+          </div>
+
+          {/* Text only version for mobile */}
+          <div className="sm:hidden col-span-2 flex flex-col items-center text-center py-4 border-t border-warm-white/10 mt-2">
+            <p className="font-display italic text-base text-warm-white leading-snug mb-1">
+              All systems are functioning normally
+            </p>
+            <a href="#" className="text-[10px] font-sans text-warm-white/80 hover:text-warm-white transition-colors inline-flex items-center gap-1">
+              Check back later for updates
+              <span>→</span>
+            </a>
           </div>
         </div>
 

@@ -13,7 +13,7 @@ const Hero = () => {
     });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  return <section className="relative w-full h-[85svh] md:h-[90svh] lg:h-[100svh] min-h-[480px] md:min-h-[560px] lg:min-h-[680px] overflow-hidden">
+  return <section className="relative w-full h-[70svh] sm:h-[75svh] md:h-[85svh] lg:h-[100svh] min-h-[400px] sm:min-h-[450px] md:min-h-[520px] lg:min-h-[680px] overflow-hidden">
       {/* Background Sky - slowest parallax (extra bleed to prevent mobile stretching/gaps) */}
       <div className="absolute inset-0 -top-[10%] -bottom-[10%]" style={{
       transform: `translate3d(0, ${scrollY * 0.2}px, 0)`

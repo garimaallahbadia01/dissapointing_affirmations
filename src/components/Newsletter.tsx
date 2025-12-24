@@ -56,7 +56,7 @@ const Newsletter = () => {
             <div className="h-44 sm:h-48 md:h-52 lg:h-full lg:min-h-[220px]">
               <img src={newsletterLandscape} alt="Renaissance landscape" className="w-full h-full object-cover object-center" draggable={false} />
             </div>
-            <div className="absolute inset-0 flex flex-col justify-between p-3 sm:p-4 lg:p-6">
+            <div className="absolute inset-0 flex flex-col justify-end items-end text-right p-3 sm:p-4 lg:p-6 gap-1 sm:gap-2">
               <p className="text-[9px] sm:text-[10px] md:text-xs font-sans tracking-widest uppercase text-warm-white/80">
                 Deflated Affirmations
               </p>
