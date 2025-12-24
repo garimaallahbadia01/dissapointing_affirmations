@@ -9,30 +9,30 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <img src={logo} alt="Deflated Affirmations" className="h-5 sm:h-6 md:h-7 w-auto" />
+            <img src={logo} alt="Deflated Affirmations" className="h-5 sm:h-6 lg:h-7 w-auto" />
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6 lg:gap-8">
-            <a href="#merch" className="text-sm font-sans tracking-[0.1em] uppercase transition-colors font-normal text-[#412c0b] hover:text-[#AD4F21]">
+          {/* Desktop Navigation - only on lg+ */}
+          <div className="hidden lg:flex items-center gap-6 xl:gap-8">
+            <a href="#merch" className="text-xs xl:text-sm font-sans tracking-[0.1em] uppercase transition-colors font-normal text-[#412c0b] hover:text-[#AD4F21]">
               Merch
             </a>
-            <a href="#custom-card" className="text-sm font-sans tracking-[0.1em] uppercase transition-colors font-normal text-[#412c0b] hover:text-[#AD4F21]">
+            <a href="#custom-card" className="text-xs xl:text-sm font-sans tracking-[0.1em] uppercase transition-colors font-normal text-[#412c0b] hover:text-[#AD4F21]">
               Custom Card
             </a>
-            <a href="#about" className="text-sm font-sans tracking-[0.1em] uppercase transition-colors font-normal text-[#412c0b] hover:text-[#AD4F21]">
+            <a href="#about" className="text-xs xl:text-sm font-sans tracking-[0.1em] uppercase transition-colors font-normal text-[#412c0b] hover:text-[#AD4F21]">
               About
             </a>
           </div>
 
-          {/* Contact Button */}
-          <button className="hidden md:block px-4 lg:px-5 py-2 border-[#412d0b] text-[#412d0b] text-sm font-sans font-medium tracking-[0.1em] uppercase hover:bg-burnt-orange hover:border-burnt-orange hover:text-primary-foreground transition-all duration-300 bg-transparent border">
+          {/* Contact Button - only on lg+ */}
+          <button className="hidden lg:block px-4 xl:px-5 py-2 border-[#412d0b] text-[#412d0b] text-xs xl:text-sm font-sans font-medium tracking-[0.1em] uppercase hover:bg-burnt-orange hover:border-burnt-orange hover:text-primary-foreground transition-all duration-300 bg-transparent border">
             Contact Us
           </button>
 
-          {/* Mobile Menu Button */}
+          {/* Hamburger Menu Button - visible on mobile + tablet */}
           <button 
-            className="md:hidden p-2 -mr-2" 
+            className="lg:hidden p-2 -mr-2" 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           >
@@ -40,31 +40,31 @@ const Navigation = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile/Tablet Menu */}
         {isMenuOpen && (
-          <div className="md:hidden mt-3 pb-4 border-t border-border pt-4 space-y-3">
+          <div className="lg:hidden mt-3 pb-4 border-t border-border pt-4 space-y-3">
             <a 
               href="#merch" 
-              className="block text-sm font-sans font-medium tracking-[0.1em] uppercase text-[#412c0b] hover:text-[#AD4F21] transition-colors py-1"
+              className="block text-xs sm:text-sm font-sans font-medium tracking-[0.1em] uppercase text-[#412c0b] hover:text-[#AD4F21] transition-colors py-1"
               onClick={() => setIsMenuOpen(false)}
             >
               Merch
             </a>
             <a 
               href="#custom-card" 
-              className="block text-sm font-sans font-medium tracking-[0.1em] uppercase text-[#412c0b] hover:text-[#AD4F21] transition-colors py-1"
+              className="block text-xs sm:text-sm font-sans font-medium tracking-[0.1em] uppercase text-[#412c0b] hover:text-[#AD4F21] transition-colors py-1"
               onClick={() => setIsMenuOpen(false)}
             >
               Custom Card
             </a>
             <a 
               href="#about" 
-              className="block text-sm font-sans font-medium tracking-[0.1em] uppercase text-[#412c0b] hover:text-[#AD4F21] transition-colors py-1"
+              className="block text-xs sm:text-sm font-sans font-medium tracking-[0.1em] uppercase text-[#412c0b] hover:text-[#AD4F21] transition-colors py-1"
               onClick={() => setIsMenuOpen(false)}
             >
               About
             </a>
-            <button className="w-full mt-2 px-5 py-2.5 bg-burnt-orange text-primary-foreground text-sm font-sans font-medium tracking-[0.1em] uppercase hover:bg-burnt-orange-dark transition-all duration-300">
+            <button className="w-full mt-2 px-5 py-2.5 bg-burnt-orange text-primary-foreground text-xs sm:text-sm font-sans font-medium tracking-[0.1em] uppercase hover:bg-burnt-orange-dark transition-all duration-300">
               Contact Us
             </button>
           </div>

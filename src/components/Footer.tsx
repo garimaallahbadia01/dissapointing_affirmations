@@ -93,7 +93,7 @@ const Footer = () => {
           </div>
 
           {/* Image and Status Card */}
-          <div className="col-span-2 sm:col-span-3 md:col-span-6 relative rounded-lg overflow-hidden h-32 sm:h-40 md:h-48">
+          <div className="col-span-2 sm:col-span-3 md:col-span-6 relative rounded-lg overflow-hidden h-28 sm:h-32 md:h-40 lg:h-48">
             {/* Background Image */}
             <img 
               alt="Vermeer style portrait" 
@@ -101,11 +101,11 @@ const Footer = () => {
               className="absolute inset-0 w-full h-full object-cover object-left z-0" 
             />
             {/* Text Overlay - higher z-index */}
-            <div className="absolute inset-0 z-10 flex flex-col justify-center items-end text-right p-4 sm:p-6 md:p-8">
-              <p className="font-display italic text-base sm:text-lg md:text-2xl text-warm-white leading-snug sm:leading-relaxed mb-2 sm:mb-3">
+            <div className="absolute inset-0 z-10 flex flex-col justify-center items-end text-right p-3 sm:p-4 md:p-6 lg:p-8">
+              <p className="font-display italic text-sm sm:text-base md:text-lg lg:text-2xl text-warm-white leading-snug mb-1.5 sm:mb-2 md:mb-3">
                 All systems are<br />functioning normally
               </p>
-              <a href="#" className="text-[10px] sm:text-xs font-sans text-warm-white/80 hover:text-warm-white transition-colors inline-flex items-center gap-1">
+              <a href="#" className="text-[9px] sm:text-[10px] md:text-xs font-sans text-warm-white/80 hover:text-warm-white transition-colors inline-flex items-center gap-1">
                 Check back later for updates
                 <span>→</span>
               </a>

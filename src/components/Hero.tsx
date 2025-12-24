@@ -30,9 +30,9 @@ const Hero = () => {
         />
       </div>
 
-      {/* Angels (smaller + anchored like the mobile reference) */}
+      {/* Angels - slightly larger for parallax visibility */}
       <div
-        className="absolute left-0 top-0 h-[22%] sm:h-[24%] md:h-[32%] lg:h-[45%] pointer-events-none"
+        className="absolute left-0 top-0 h-[28%] sm:h-[30%] md:h-[38%] lg:h-[50%] pointer-events-none"
         style={{ transform: `translate3d(0, ${scrollY * 0.1}px, 0)` }}
       >
         <img
@@ -44,7 +44,7 @@ const Hero = () => {
       </div>
 
       <div
-        className="absolute right-0 bottom-0 h-[22%] sm:h-[24%] md:h-[32%] lg:h-[45%] pointer-events-none"
+        className="absolute right-0 bottom-0 h-[28%] sm:h-[30%] md:h-[38%] lg:h-[50%] pointer-events-none"
         style={{ transform: `translate3d(0, ${scrollY * 0.1}px, 0)` }}
       >
         <img
@@ -60,7 +60,7 @@ const Hero = () => {
         className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 sm:px-6"
         style={{ transform: `translate3d(0, ${scrollY * 0.25}px, 0)` }}
       >
-        <h1 className="font-display italic text-xl sm:text-2xl md:text-4xl lg:text-6xl text-charcoal max-w-[78%] sm:max-w-xl md:max-w-2xl leading-snug sm:leading-relaxed animate-fade-in-up">
+        <h1 className="font-display italic text-xl sm:text-2xl md:text-3xl lg:text-5xl xl:text-6xl text-charcoal max-w-[78%] sm:max-w-lg md:max-w-xl lg:max-w-2xl leading-snug sm:leading-relaxed animate-fade-in-up">
           Lowering expectations, one
           <br className="hidden sm:block" />
           <span className="sm:hidden"> </span>
