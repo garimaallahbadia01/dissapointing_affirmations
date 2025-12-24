@@ -44,13 +44,13 @@ const CardCarousel = () => {
       };
     } else if (diff === -1 || currentIndex === 0 && index === cards.length - 1) {
       return {
-        transform: 'translateX(-55%) rotate(-8deg) scale(0.9)',
+        transform: 'translateX(-55%) rotate(-8deg) scale(0.85)',
         zIndex: 20,
         opacity: 1
       };
     } else if (diff === 1 || currentIndex === cards.length - 1 && index === 0) {
       return {
-        transform: 'translateX(55%) rotate(8deg) scale(0.9)',
+        transform: 'translateX(55%) rotate(8deg) scale(0.85)',
         zIndex: 20,
         opacity: 1
       };
