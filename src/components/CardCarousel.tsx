@@ -48,25 +48,25 @@ const CardCarousel = () => {
     const diff = index - currentIndex;
     if (diff === 0) {
       return {
-        transform: 'translateX(0) rotate(0deg) scale(1)',
+        transform: 'translateX(0) rotate(0deg) scale(0.95)',
         zIndex: 30,
         opacity: 1
       };
-    } else if (diff === -1 || currentIndex === 0 && index === cards.length - 1) {
+    } else if (diff === -1 || (currentIndex === 0 && index === cards.length - 1)) {
       return {
-        transform: 'translateX(-55%) rotate(-8deg) scale(0.85)',
+        transform: 'translateX(-62%) rotate(-6deg) scale(0.68)',
         zIndex: 20,
         opacity: 1
       };
-    } else if (diff === 1 || currentIndex === cards.length - 1 && index === 0) {
+    } else if (diff === 1 || (currentIndex === cards.length - 1 && index === 0)) {
       return {
-        transform: 'translateX(55%) rotate(8deg) scale(0.85)',
+        transform: 'translateX(62%) rotate(6deg) scale(0.68)',
         zIndex: 20,
         opacity: 1
       };
     }
     return {
-      transform: 'translateX(0) scale(0.7)',
+      transform: 'translateX(0) scale(0.6)',
       zIndex: 10,
       opacity: 0
     };
@@ -93,24 +93,26 @@ const CardCarousel = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 bg-background overflow-hidden">
-      <div 
+    <section className="py-10 sm:py-16 md:py-24 px-4 sm:px-6 bg-background overflow-hidden">
+      <div
         ref={ref}
         className={`max-w-6xl mx-auto transition-all duration-700 ease-out ${
-          isVisible 
-            ? 'opacity-100 translate-y-0' 
-            : 'opacity-0 translate-y-10'
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
         {/* Cards Container with Navigation */}
         <div className="relative flex items-center justify-center">
-          {/* Navigation Arrows - positioned absolutely outside the card stack */}
-          <button onClick={prevCard} className="absolute left-0 sm:left-2 md:left-4 lg:left-8 z-40 w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-[#412d0b]/30 bg-background/80 backdrop-blur-sm flex items-center justify-center text-[#412d0b] hover:bg-[#412d0b] hover:text-primary-foreground transition-all duration-300" aria-label="Previous card">
-            <ArrowLeft size={18} className="sm:w-5 sm:h-5" />
+          {/* Navigation Arrows */}
+          <button
+            onClick={prevCard}
+            className="absolute left-0 sm:left-2 md:left-4 lg:left-8 z-40 w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full border border-[#412d0b]/30 bg-background/80 backdrop-blur-sm flex items-center justify-center text-[#412d0b] hover:bg-[#412d0b] hover:text-primary-foreground transition-all duration-300"
+            aria-label="Previous card"
+          >
+            <ArrowLeft size={16} className="sm:w-[18px] sm:h-[18px] md:w-5 md:h-5" />
           </button>
 
           {/* Cards */}
-          <div className="relative w-44 xs:w-52 sm:w-64 md:w-72 lg:w-80 mx-10 xs:mx-12 sm:mx-14 md:mx-20 lg:mx-28">
+          <div className="relative w-36 sm:w-48 md:w-60 lg:w-72 mx-8 sm:mx-12 md:mx-16 lg:mx-20">
             {cards.map((card, index) => <div 
               key={card.id} 
               className="transition-all duration-500 ease-out perspective-1000 cursor-pointer" 

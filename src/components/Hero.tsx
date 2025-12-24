@@ -16,52 +16,55 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-[100svh] min-h-[500px] max-h-[900px] md:max-h-none overflow-hidden">
-      {/* Background Sky - slowest parallax */}
-      <div 
-        className="absolute inset-0"
-        style={{ transform: `translateY(${scrollY * 0.3}px)` }}
+    <section className="relative w-full h-[100svh] min-h-[560px] md:min-h-[680px] overflow-hidden">
+      {/* Background Sky - slowest parallax (extra bleed to prevent mobile stretching/gaps) */}
+      <div
+        className="absolute inset-0 -top-[10%] -bottom-[10%]"
+        style={{ transform: `translate3d(0, ${scrollY * 0.2}px, 0)` }}
       >
-        <img 
-          src={heroSky} 
-          alt="Renaissance sky with rainbow" 
-          className="w-full h-[120%] object-cover object-top md:h-full md:object-center" 
+        <img
+          src={heroSky}
+          alt="Renaissance sky with rainbow"
+          className="w-full h-full object-cover object-[center_25%] sm:object-[center_35%] md:object-center"
+          draggable={false}
         />
       </div>
 
-      {/* Mobile: Angels positioned top and bottom */}
-      {/* Left Angel - top left on mobile, bottom left on desktop */}
-      <div 
-        className="absolute left-0 top-0 md:top-auto md:bottom-0 h-[35%] sm:h-[40%] md:h-[70%] lg:h-[85%] pointer-events-none"
-        style={{ transform: `translateY(${scrollY * 0.15}px)` }}
+      {/* Angels (smaller + anchored like the mobile reference) */}
+      <div
+        className="absolute left-0 top-0 h-[22%] sm:h-[24%] md:h-[32%] lg:h-[45%] pointer-events-none"
+        style={{ transform: `translate3d(0, ${scrollY * 0.1}px, 0)` }}
       >
-        <img 
-          src={angelLeft} 
-          alt="Angel with coffee" 
-          className="h-full w-auto object-contain object-left-top md:object-left-bottom" 
+        <img
+          src={angelLeft}
+          alt="Angel with coffee"
+          className="h-full w-auto object-contain object-left-top"
+          draggable={false}
         />
       </div>
 
-      {/* Right Angel - bottom right on all sizes */}
-      <div 
-        className="absolute right-0 bottom-0 h-[35%] sm:h-[40%] md:h-[70%] lg:h-[85%] pointer-events-none"
-        style={{ transform: `translateY(${scrollY * 0.15}px)` }}
+      <div
+        className="absolute right-0 bottom-0 h-[22%] sm:h-[24%] md:h-[32%] lg:h-[45%] pointer-events-none"
+        style={{ transform: `translate3d(0, ${scrollY * 0.1}px, 0)` }}
       >
-        <img 
-          src={angelRight} 
-          alt="Angel with scroll" 
-          className="h-full w-auto object-contain object-right-bottom" 
+        <img
+          src={angelRight}
+          alt="Angel with scroll"
+          className="h-full w-auto object-contain object-right-bottom"
+          draggable={false}
         />
       </div>
 
-      {/* Content - faster parallax for depth effect */}
-      <div 
+      {/* Content */}
+      <div
         className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 sm:px-6"
-        style={{ transform: `translateY(${scrollY * 0.5}px)` }}
+        style={{ transform: `translate3d(0, ${scrollY * 0.25}px, 0)` }}
       >
-        <h1 className="font-display italic text-xl sm:text-2xl md:text-4xl lg:text-6xl text-charcoal max-w-[85%] sm:max-w-xl md:max-w-2xl leading-snug sm:leading-relaxed animate-fade-in-up">
-          Lowering expectations, one<br className="hidden sm:block" />
-          <span className="sm:hidden"> </span>affirmation at a time
+        <h1 className="font-display italic text-xl sm:text-2xl md:text-4xl lg:text-6xl text-charcoal max-w-[78%] sm:max-w-xl md:max-w-2xl leading-snug sm:leading-relaxed animate-fade-in-up">
+          Lowering expectations, one
+          <br className="hidden sm:block" />
+          <span className="sm:hidden"> </span>
+          affirmation at a time
         </h1>
 
         {/* Scroll Indicator */}

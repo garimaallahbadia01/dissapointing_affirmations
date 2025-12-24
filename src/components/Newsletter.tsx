@@ -26,10 +26,15 @@ const Newsletter = () => {
       >
         <div className="flex flex-col md:flex-row gap-4 sm:gap-5 md:gap-6">
           {/* Left Section: Angels + Content */}
-          <div className="flex flex-col sm:flex-row md:flex-[1.6]">
-            {/* Angels Image - shows on mobile as small strip, larger on tablet+ */}
-            <div className="h-32 sm:h-auto sm:w-[30%] md:w-[35%] lg:w-[40%]">
-              <img src={newsletterAngels} alt="Angels with laptop" className="w-full h-full object-cover object-top sm:object-center" />
+          <div className="flex flex-col sm:flex-row md:flex-[1.6] overflow-hidden">
+            {/* Angels Image (always visible; behaves like the mobile reference) */}
+            <div className="relative h-32 sm:h-auto sm:w-[30%] md:w-[35%] lg:w-[40%]">
+              <img
+                src={newsletterAngels}
+                alt="Angels with laptop"
+                className="w-full h-full object-cover object-[center_20%]"
+                draggable={false}
+              />
             </div>
 
             {/* Center Content */}
@@ -46,18 +51,18 @@ const Newsletter = () => {
                 <label className="block text-[10px] sm:text-xs font-sans font-medium tracking-widest uppercase text-muted-foreground mb-1">
                   Enter Email
                 </label>
-                <div className="flex flex-col sm:flex-row gap-2">
-                  <input 
-                    type="email" 
-                    value={email} 
-                    onChange={e => setEmail(e.target.value)} 
-                    placeholder="receive daily disappointments" 
-                    className="flex-1 px-3 py-2 sm:py-2.5 bg-background border border-border text-xs sm:text-sm font-sans placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" 
-                    required 
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-stretch">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={e => setEmail(e.target.value)}
+                    placeholder="receive daily disappointments"
+                    className="flex-1 min-w-0 px-3 py-2.5 bg-background border border-border text-xs sm:text-sm font-sans placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
+                    required
                   />
-                  <button 
-                    type="submit" 
-                    className="px-4 sm:px-5 py-2 sm:py-2.5 text-primary-foreground text-xs font-sans font-medium tracking-wider uppercase hover:bg-burnt-orange-dark transition-colors duration-300 bg-burnt-orange"
+                  <button
+                    type="submit"
+                    className="w-full sm:w-auto px-4 sm:px-5 py-2.5 text-primary-foreground text-xs font-sans font-medium tracking-wider uppercase hover:bg-burnt-orange-dark transition-colors duration-300 bg-burnt-orange"
                   >
                     Subscribe
                   </button>
@@ -66,9 +71,16 @@ const Newsletter = () => {
             </div>
           </div>
 
-          {/* Right Image with Overlay - smaller on tablet */}
-          <div className="md:w-[30%] lg:w-[25%] relative h-40 sm:h-48 md:h-auto md:min-h-[200px]">
-            <img src={newsletterLandscape} alt="Renaissance landscape" className="w-full h-full object-cover" />
+          {/* Right Image with Overlay (not oversized on tablet) */}
+          <div className="md:w-[32%] lg:w-[25%] relative overflow-hidden rounded-md bg-muted">
+            <div className="aspect-[4/3] md:aspect-[3/4]">
+              <img
+                src={newsletterLandscape}
+                alt="Renaissance landscape"
+                className="w-full h-full object-cover object-center"
+                draggable={false}
+              />
+            </div>
             <div className="absolute inset-0 flex flex-col justify-end p-3 sm:p-4 md:p-5 lg:p-6">
               <p className="text-[9px] sm:text-[10px] md:text-xs font-sans tracking-widest uppercase text-warm-white/80 mb-1">
                 Deflated Affirmations
