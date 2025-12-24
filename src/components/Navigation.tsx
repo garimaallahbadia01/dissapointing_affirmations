@@ -35,23 +35,25 @@ const Navigation = () => {
           </button>
         </div>
 
-        {/* Mobile/Tablet Menu - cleaner layout */}
-        {isMenuOpen && <div className="lg:hidden mt-3 pb-4 border-t border-border pt-4">
-            <div className="flex flex-wrap gap-x-6 gap-y-3">
-              <a href="#merch" onClick={() => setIsMenuOpen(false)} className="text-xs sm:text-sm font-sans tracking-[0.1em] uppercase text-[#412c0b] hover:text-[#AD4F21] transition-colors font-normal">
+        {/* Mobile/Tablet Menu - full screen overlay */}
+        {isMenuOpen && (
+          <div className="lg:hidden fixed inset-0 top-[52px] sm:top-[60px] z-50 bg-background/98 backdrop-blur-md">
+            <div className="flex flex-col items-center justify-center h-full gap-8">
+              <a href="#merch" onClick={() => setIsMenuOpen(false)} className="text-lg sm:text-xl font-sans tracking-[0.15em] uppercase text-foreground hover:text-burnt-orange transition-colors font-normal">
                 Merch
               </a>
-              <a href="#custom-card" onClick={() => setIsMenuOpen(false)} className="text-xs sm:text-sm font-sans tracking-[0.1em] uppercase text-[#412c0b] hover:text-[#AD4F21] transition-colors font-normal">
+              <a href="#custom-card" onClick={() => setIsMenuOpen(false)} className="text-lg sm:text-xl font-sans tracking-[0.15em] uppercase text-foreground hover:text-burnt-orange transition-colors font-normal">
                 Custom Card
               </a>
-              <a href="#about" onClick={() => setIsMenuOpen(false)} className="text-xs sm:text-sm font-sans tracking-[0.1em] uppercase text-[#412c0b] hover:text-[#AD4F21] transition-colors font-normal">
+              <a href="#about" onClick={() => setIsMenuOpen(false)} className="text-lg sm:text-xl font-sans tracking-[0.15em] uppercase text-foreground hover:text-burnt-orange transition-colors font-normal">
                 About
               </a>
-              <a href="#contact" onClick={() => setIsMenuOpen(false)} className="text-xs sm:text-sm font-sans tracking-[0.1em] uppercase text-[#412c0b] hover:text-[#AD4F21] transition-colors font-normal">
+              <a href="#contact" onClick={() => setIsMenuOpen(false)} className="text-lg sm:text-xl font-sans tracking-[0.15em] uppercase text-foreground hover:text-burnt-orange transition-colors font-normal">
                 Contact Us
               </a>
             </div>
-          </div>}
+          </div>
+        )}
       </div>
     </nav>;
 };
