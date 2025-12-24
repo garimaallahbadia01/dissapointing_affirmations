@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ArrowLeft, ArrowRight, RotateCw } from 'lucide-react';
+import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 import cardSunflower from '@/assets/card-sunflower.png';
 import cardMirror from '@/assets/card-mirror.png';
 import cardWine from '@/assets/card-wine.png';
@@ -89,8 +90,18 @@ const CardCarousel = () => {
       return newSet;
     });
   };
-  return <section className="py-16 md:py-24 px-6 bg-background overflow-hidden">
-      <div className="max-w-6xl mx-auto">
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
+
+  return (
+    <section className="py-16 md:py-24 px-6 bg-background overflow-hidden">
+      <div 
+        ref={ref}
+        className={`max-w-6xl mx-auto transition-all duration-700 ease-out ${
+          isVisible 
+            ? 'opacity-100 translate-y-0' 
+            : 'opacity-0 translate-y-10'
+        }`}
+      >
         {/* Cards Container with Navigation */}
         <div className="relative flex items-center justify-center">
           {/* Navigation Arrows - positioned absolutely outside the card stack */}
@@ -149,6 +160,8 @@ const CardCarousel = () => {
           </button>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default CardCarousel;

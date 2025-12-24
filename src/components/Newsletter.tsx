@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { toast } from 'sonner';
+import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 import newsletterAngels from '@/assets/newsletter-angels.png';
 import newsletterLandscape from '@/assets/newsletter-landscape.png';
-import footerVermeer from '@/assets/footer-vermeer.jpg';
+
 const Newsletter = () => {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.15 });
   const [email, setEmail] = useState('');
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -12,8 +14,16 @@ const Newsletter = () => {
       setEmail('');
     }
   };
-  return <section className="py-16 md:py-24 px-6 bg-background">
-      <div className="max-w-6xl mx-auto">
+  return (
+    <section className="py-16 md:py-24 px-6 bg-background">
+      <div 
+        ref={ref}
+        className={`max-w-6xl mx-auto transition-all duration-700 ease-out ${
+          isVisible 
+            ? 'opacity-100 translate-y-0' 
+            : 'opacity-0 translate-y-10'
+        }`}
+      >
         <div className="flex flex-col lg:flex-row gap-6">
           {/* Left Section: Angels + Content */}
           <div className="flex flex-[1.6]">
@@ -59,6 +69,8 @@ const Newsletter = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Newsletter;
