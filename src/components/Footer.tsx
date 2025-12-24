@@ -90,24 +90,23 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Spacer */}
-          <div className="hidden md:block md:col-span-2" />
-
-          {/* Image and Status */}
-          <div className="col-span-2 md:col-span-4 flex flex-col items-end justify-between">
-            <div className="flex items-end gap-4">
-              <div className="w-24 h-32 md:w-32 md:h-40 overflow-hidden">
-                <img alt="Vermeer style portrait" src="/lovable-uploads/43b96dc9-edd4-4990-bdb6-0f6e39aab1f2.png" className="w-full h-full object-contain" />
-              </div>
-              <div className="text-right">
-                <p className="font-display italic text-lg text-warm-white leading-relaxed mb-2 text-left md:text-3xl">
-                  All systems are<br />functioning normally
-                </p>
-                <a href="#" className="text-xs font-sans hover:text-burnt-orange-light transition-colors inline-flex items-center gap-1 text-primary-foreground">
-                  Check back later for updates
-                  <span>→</span>
-                </a>
-              </div>
+          {/* Image and Status Card */}
+          <div className="col-span-2 md:col-span-6 relative rounded-lg overflow-hidden h-40 md:h-48">
+            {/* Background Image */}
+            <img 
+              alt="Vermeer style portrait" 
+              src="/lovable-uploads/43b96dc9-edd4-4990-bdb6-0f6e39aab1f2.png" 
+              className="absolute inset-0 w-full h-full object-cover object-left z-0" 
+            />
+            {/* Text Overlay - higher z-index */}
+            <div className="absolute inset-0 z-10 flex flex-col justify-center items-end text-right p-6 md:p-8">
+              <p className="font-display italic text-lg md:text-2xl text-warm-white leading-relaxed mb-3">
+                All systems are<br />functioning normally
+              </p>
+              <a href="#" className="text-xs font-sans text-warm-white/80 hover:text-warm-white transition-colors inline-flex items-center gap-1">
+                Check back later for updates
+                <span>→</span>
+              </a>
             </div>
           </div>
         </div>
