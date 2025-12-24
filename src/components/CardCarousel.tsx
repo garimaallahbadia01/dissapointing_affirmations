@@ -110,7 +110,7 @@ const CardCarousel = () => {
           </button>
 
           {/* Cards */}
-          <div className="relative w-56 sm:w-72 md:w-80 lg:w-96 mx-12 sm:mx-16 md:mx-24 lg:mx-32">
+          <div className="relative w-44 xs:w-52 sm:w-64 md:w-72 lg:w-80 mx-10 xs:mx-12 sm:mx-14 md:mx-20 lg:mx-28">
             {cards.map((card, index) => <div 
               key={card.id} 
               className="transition-all duration-500 ease-out perspective-1000 cursor-pointer" 
@@ -134,11 +134,11 @@ const CardCarousel = () => {
                   {/* Back */}
                   <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-xl overflow-hidden shadow-2xl">
                     <img src={cardBackTemplate} alt="Card back" className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 flex flex-col items-center justify-center p-6 sm:p-8 md:p-10">
-                      <h3 className="font-display italic text-xl sm:text-2xl md:text-3xl text-charcoal text-center leading-tight mb-3 sm:mb-4">
+                    <div className="absolute inset-0 flex flex-col items-center justify-center p-4 xs:p-5 sm:p-6 md:p-8">
+                      <h3 className="font-display italic text-base xs:text-lg sm:text-xl md:text-2xl text-charcoal text-center leading-tight mb-2 sm:mb-3">
                         {card.backQuote}
                       </h3>
-                      <p className="font-sans text-xs sm:text-sm md:text-base text-charcoal/80 text-center leading-relaxed max-w-[85%] sm:max-w-[80%]">
+                      <p className="font-sans text-[10px] xs:text-xs sm:text-sm text-charcoal/80 text-center leading-relaxed max-w-[90%] sm:max-w-[85%]">
                         {card.backPunchline}
                       </p>
                     </div>
