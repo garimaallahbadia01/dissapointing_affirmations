@@ -5,31 +5,40 @@ import cardMirror from '@/assets/card-mirror.png';
 import cardWine from '@/assets/card-wine.png';
 import cardHeadphones from '@/assets/card-headphones.png';
 import cardBus from '@/assets/card-bus.png';
+import cardBackTemplate from '@/assets/card-back-template.png';
+
 interface Card {
   id: number;
   frontImage: string;
-  backText: string;
+  backQuote: string;
+  backPunchline: string;
 }
+
 const cards: Card[] = [{
   id: 1,
   frontImage: cardSunflower,
-  backText: "Your potential is as fleeting as that bubble you are blowing."
+  backQuote: "You are loved.",
+  backPunchline: "By your mother. Who is contractually obligated."
 }, {
   id: 2,
   frontImage: cardMirror,
-  backText: "The mirror does not lie. But maybe you should."
+  backQuote: "Follow your dreams.",
+  backPunchline: "They're running away for a reason. Take the hint."
 }, {
   id: 3,
   frontImage: cardWine,
-  backText: "Wine helps. But not that much."
+  backQuote: "You've got this.",
+  backPunchline: "You don't. But the confidence is endearing."
 }, {
   id: 4,
   frontImage: cardHeadphones,
-  backText: "The podcast won't fix you. But at least you'll feel productive."
+  backQuote: "The best is yet to come.",
+  backPunchline: "Statistically unlikely, but we admire your optimism."
 }, {
   id: 5,
   frontImage: cardBus,
-  backText: "You missed the bus. Again. It's a metaphor."
+  backQuote: "What doesn't kill you makes you stronger.",
+  backPunchline: "Your life choices are really testing this theory."
 }];
 const CardCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -112,10 +121,16 @@ const CardCarousel = () => {
                   </div>
 
                   {/* Back */}
-                  <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-xl bg-charcoal flex items-center justify-center p-6 shadow-2xl">
-                    <p className="font-display italic text-lg md:text-xl text-warm-white text-center leading-relaxed">
-                      &ldquo;{card.backText}&rdquo;
-                    </p>
+                  <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-xl overflow-hidden shadow-2xl">
+                    <img src={cardBackTemplate} alt="Card back" className="w-full h-full object-cover" />
+                    <div className="absolute inset-0 flex flex-col items-center justify-center p-8 md:p-10">
+                      <h3 className="font-display italic text-2xl md:text-3xl text-charcoal text-center leading-tight mb-4">
+                        {card.backQuote}
+                      </h3>
+                      <p className="font-sans text-sm md:text-base text-charcoal/80 text-center leading-relaxed max-w-[80%]">
+                        {card.backPunchline}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>)}
