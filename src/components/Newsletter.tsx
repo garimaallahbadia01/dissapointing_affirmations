@@ -16,9 +16,9 @@ const Newsletter = () => {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-6">
           {/* Left Section: Angels + Content */}
-          <div className="flex flex-[1.3]">
+          <div className="flex flex-[1.6]">
             {/* Left Image */}
-            <div className="hidden lg:block lg:w-[45%]">
+            <div className="hidden lg:block lg:w-[40%]">
               <img src={newsletterAngels} alt="Angels with laptop" className="w-full h-full object-cover" />
             </div>
 
@@ -46,7 +46,7 @@ const Newsletter = () => {
           </div>
 
           {/* Right Image with Overlay */}
-          <div className="lg:w-[30%] relative min-h-[300px]">
+          <div className="lg:w-[25%] relative min-h-[300px]">
             <img src={newsletterLandscape} alt="Renaissance landscape" className="w-full h-full object-cover" />
             <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
               <p className="text-xs font-sans tracking-widest uppercase text-warm-white/80 mb-2">
