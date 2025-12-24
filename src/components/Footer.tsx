@@ -90,18 +90,15 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Spacer */}
-          <div className="hidden md:block md:col-span-2" />
-
           {/* Image and Status */}
-          <div className="col-span-2 md:col-span-4 flex flex-col items-end justify-between">
-            <div className="relative">
-              <img alt="Vermeer style portrait" className="w-full h-auto object-contain max-h-48" src="/lovable-uploads/43b96dc9-edd4-4990-bdb6-0f6e39aab1f2.png" />
-              <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
-                <p className="font-display italic text-lg md:text-xl text-warm-white leading-relaxed mb-2">
+          <div className="col-span-2 md:col-span-6 flex items-center justify-end">
+            <div className="relative w-full max-w-md">
+              <img alt="Vermeer style portrait" className="w-full h-auto object-contain rounded-sm" src="/lovable-uploads/43b96dc9-edd4-4990-bdb6-0f6e39aab1f2.png" />
+              <div className="absolute inset-0 flex flex-col justify-center items-end text-right pr-6 md:pr-10">
+                <p className="font-display italic text-xl md:text-2xl text-warm-white leading-relaxed mb-3">
                   All systems are<br />functioning normally
                 </p>
-                <a href="#" className="text-xs font-sans text-primary hover:text-burnt-orange-light transition-colors inline-flex items-center gap-1">
+                <a href="#" className="text-xs font-sans text-warm-white/80 hover:text-warm-white transition-colors inline-flex items-center gap-1">
                   Check back later for updates
                   <span>→</span>
                 </a>
