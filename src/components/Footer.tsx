@@ -1,6 +1,6 @@
 import footerVermeer from '@/assets/footer-vermeer.jpg';
 const Footer = () => {
-  return <footer className="bg-charcoal text-warm-white">
+  return <footer className="text-warm-white bg-accent">
       <div className="max-w-7xl mx-auto px-6 py-12 md:py-16">
         <div className="grid grid-cols-2 md:grid-cols-12 gap-8 md:gap-12">
           {/* Navigation Column */}
@@ -90,19 +90,20 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Spacer */}
+          <div className="hidden md:block md:col-span-2" />
+
           {/* Image and Status */}
-          <div className="col-span-2 md:col-span-6 flex items-start justify-end">
-            <div className="flex bg-primary rounded-sm overflow-hidden w-full max-w-lg">
-              {/* Portrait Image */}
-              <div className="w-2/5 flex-shrink-0">
+          <div className="col-span-2 md:col-span-4 flex flex-col items-end justify-between">
+            <div className="flex items-end gap-4">
+              <div className="w-24 h-32 md:w-32 md:h-40 overflow-hidden">
                 <img alt="Vermeer style portrait" className="w-full h-full object-cover" src="/lovable-uploads/43b96dc9-edd4-4990-bdb6-0f6e39aab1f2.png" />
               </div>
-              {/* Text Content */}
-              <div className="flex-1 flex flex-col justify-center p-6">
-                <p className="font-display italic text-xl md:text-2xl text-warm-white leading-relaxed mb-4">
+              <div className="text-right">
+                <p className="font-display italic text-lg md:text-xl text-warm-white leading-relaxed mb-2">
                   All systems are<br />functioning normally
                 </p>
-                <a href="#" className="text-xs font-sans text-warm-white/70 hover:text-warm-white transition-colors inline-flex items-center gap-1">
+                <a href="#" className="text-xs font-sans text-primary hover:text-burnt-orange-light transition-colors inline-flex items-center gap-1">
                   Check back later for updates
                   <span>→</span>
                 </a>
