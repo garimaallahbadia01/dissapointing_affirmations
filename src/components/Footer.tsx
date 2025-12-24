@@ -95,11 +95,9 @@ const Footer = () => {
 
           {/* Image and Status */}
           <div className="col-span-2 md:col-span-4 flex flex-col items-end justify-between">
-            <div className="flex items-end gap-4">
-              <div className="w-24 h-32 md:w-32 md:h-40 overflow-hidden">
-                <img alt="Vermeer style portrait" className="w-full h-full object-cover" src="/lovable-uploads/43b96dc9-edd4-4990-bdb6-0f6e39aab1f2.png" />
-              </div>
-              <div className="text-right">
+            <div className="relative">
+              <img alt="Vermeer style portrait" className="w-full h-auto object-contain max-h-48" src="/lovable-uploads/43b96dc9-edd4-4990-bdb6-0f6e39aab1f2.png" />
+              <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4">
                 <p className="font-display italic text-lg md:text-xl text-warm-white leading-relaxed mb-2">
                   All systems are<br />functioning normally
                 </p>
