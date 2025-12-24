@@ -53,7 +53,7 @@ const Newsletter = () => {
 
           {/* Right Image with Overlay - stacks below on mobile/tablet, side-by-side on lg+ */}
           <div className="w-full lg:w-[25%] relative overflow-hidden rounded-md bg-muted">
-            <div className="h-36 sm:h-40 md:h-44 lg:h-full lg:min-h-[220px]">
+            <div className="h-44 sm:h-48 md:h-52 lg:h-full lg:min-h-[220px]">
               <img src={newsletterLandscape} alt="Renaissance landscape" className="w-full h-full object-cover object-center" draggable={false} />
             </div>
             <div className="absolute inset-0 flex flex-col justify-between p-3 sm:p-4 lg:p-6">
