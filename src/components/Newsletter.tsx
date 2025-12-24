@@ -24,7 +24,7 @@ const Newsletter = () => {
           {/* Left Section: Angels + Content */}
           <div className="flex flex-col sm:flex-row lg:flex-[1.6] overflow-hidden">
             {/* Angels Image (always visible) */}
-            <div className="relative h-32 sm:h-auto sm:w-[30%] md:w-[32%] lg:w-[40%]">
+            <div className="relative h-40 sm:h-auto sm:w-[30%] md:w-[32%] lg:w-[40%]">
               <img src={newsletterAngels} alt="Angels with laptop" className="w-full h-full object-cover object-[center_20%]" draggable={false} />
             </div>
 
