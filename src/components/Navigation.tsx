@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import logo from '@/assets/logo.png';
 
 const Navigation = () => {
@@ -36,15 +37,15 @@ const Navigation = () => {
 
           {/* Desktop Navigation - only on lg+ */}
           <div className="hidden lg:flex items-center gap-6 xl:gap-8">
-            <a href="#merch" className="text-xs xl:text-sm font-sans tracking-[0.1em] uppercase transition-colors font-normal text-[#412c0b] hover:text-[#AD4F21]">
+            <a href="#merch" className="text-xs xl:text-sm font-sans tracking-[0.1em] uppercase transition-colors font-normal text-[#412c0b] hover:text-[#AD4F21] hover:underline underline-offset-4">
               Merch
             </a>
-            <a href="#custom-card" className="text-xs xl:text-sm font-sans tracking-[0.1em] uppercase transition-colors font-normal text-[#412c0b] hover:text-[#AD4F21]">
+            <a href="#custom-card" className="text-xs xl:text-sm font-sans tracking-[0.1em] uppercase transition-colors font-normal text-[#412c0b] hover:text-[#AD4F21] hover:underline underline-offset-4">
               Custom Card
             </a>
-            <a href="#about" className="text-xs xl:text-sm font-sans tracking-[0.1em] uppercase transition-colors font-normal text-[#412c0b] hover:text-[#AD4F21]">
+            <Link to="/about" className="text-xs xl:text-sm font-sans tracking-[0.1em] uppercase transition-colors font-normal text-[#412c0b] hover:text-[#AD4F21] hover:underline underline-offset-4">
               About
-            </a>
+            </Link>
           </div>
 
           {/* Contact Button - only on lg+ */}
@@ -94,28 +95,28 @@ const Navigation = () => {
           <a 
             href="#merch" 
             onClick={closeMenu} 
-            className="text-lg sm:text-xl font-sans tracking-[0.15em] uppercase text-foreground hover:text-burnt-orange transition-colors duration-200 font-normal"
+            className="text-lg sm:text-xl font-sans tracking-[0.15em] uppercase text-foreground hover:text-burnt-orange hover:underline underline-offset-4 transition-colors duration-200 font-normal"
           >
             Merch
           </a>
           <a 
             href="#custom-card" 
             onClick={closeMenu} 
-            className="text-lg sm:text-xl font-sans tracking-[0.15em] uppercase text-foreground hover:text-burnt-orange transition-colors duration-200 font-normal"
+            className="text-lg sm:text-xl font-sans tracking-[0.15em] uppercase text-foreground hover:text-burnt-orange hover:underline underline-offset-4 transition-colors duration-200 font-normal"
           >
             Custom Card
           </a>
-          <a 
-            href="#about" 
+          <Link 
+            to="/about" 
             onClick={closeMenu} 
-            className="text-lg sm:text-xl font-sans tracking-[0.15em] uppercase text-foreground hover:text-burnt-orange transition-colors duration-200 font-normal"
+            className="text-lg sm:text-xl font-sans tracking-[0.15em] uppercase text-foreground hover:text-burnt-orange hover:underline underline-offset-4 transition-colors duration-200 font-normal"
           >
             About
-          </a>
+          </Link>
           <a 
             href="#contact" 
             onClick={closeMenu} 
-            className="text-lg sm:text-xl font-sans tracking-[0.15em] uppercase text-foreground hover:text-burnt-orange transition-colors duration-200 font-normal"
+            className="text-lg sm:text-xl font-sans tracking-[0.15em] uppercase text-foreground hover:text-burnt-orange hover:underline underline-offset-4 transition-colors duration-200 font-normal"
           >
             Contact Us
           </a>
