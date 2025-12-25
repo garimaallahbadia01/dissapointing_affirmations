@@ -4,6 +4,14 @@ import angelLeft from '@/assets/angel-left.png';
 import angelRight from '@/assets/angel-right.png';
 const Hero = () => {
   const [scrollY, setScrollY] = useState(0);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    // Trigger entrance animations after mount
+    const timer = setTimeout(() => setIsLoaded(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -21,16 +29,18 @@ const Hero = () => {
         <img src={heroSky} alt="Renaissance sky with rainbow" className="w-full h-full object-cover object-[center_25%] sm:object-[center_35%] md:object-center" draggable={false} />
       </div>
 
-      {/* Angels - larger on desktop with stronger parallax */}
-      <div className="absolute left-0 top-0 h-[28%] sm:h-[30%] md:h-[38%] lg:h-[60%] xl:h-[65%] pointer-events-none" style={{
-      transform: `translate3d(0, ${scrollY * 0.15}px, 0)`
-    }}>
+      {/* Angels - larger on desktop with stronger parallax and entrance animations */}
+      <div 
+        className={`absolute left-0 top-0 h-[28%] sm:h-[30%] md:h-[38%] lg:h-[60%] xl:h-[65%] pointer-events-none transition-all duration-1000 ease-out ${isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-16'}`}
+        style={{ transform: `translate3d(${isLoaded ? 0 : -64}px, ${scrollY * 0.15}px, 0)` }}
+      >
         <img src={angelLeft} alt="Angel with coffee" className="h-full w-auto object-contain object-left-top" draggable={false} />
       </div>
 
-      <div className="absolute right-0 bottom-0 h-[28%] sm:h-[30%] md:h-[38%] lg:h-[60%] xl:h-[65%] pointer-events-none" style={{
-      transform: `translate3d(0, ${scrollY * 0.15}px, 0)`
-    }}>
+      <div 
+        className={`absolute right-0 bottom-0 h-[28%] sm:h-[30%] md:h-[38%] lg:h-[60%] xl:h-[65%] pointer-events-none transition-all duration-1000 ease-out delay-200 ${isLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-16'}`}
+        style={{ transform: `translate3d(${isLoaded ? 0 : 64}px, ${scrollY * 0.15}px, 0)` }}
+      >
         <img src={angelRight} alt="Angel with scroll" className="h-full w-auto object-contain object-right-bottom" draggable={false} />
       </div>
 
