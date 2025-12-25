@@ -102,7 +102,7 @@ const CardCarousel = () => {
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
 
   return (
-    <section className="py-16 sm:py-20 md:py-28 lg:pt-[18vh] lg:pb-28 px-4 sm:px-6 bg-background overflow-hidden">
+    <section className="py-16 sm:py-20 md:py-28 lg:py-[12vh] xl:py-[14vh] 2xl:py-[16vh] px-4 sm:px-6 bg-background overflow-hidden flex items-center min-h-[auto] lg:min-h-[70vh] xl:min-h-[75vh]">
       <div
         ref={ref}
         className={`max-w-6xl mx-auto transition-all duration-700 ease-out ${
