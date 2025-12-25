@@ -1,4 +1,4 @@
-import footerVermeer from '@/assets/footer-vermeer.jpg';
+import footerPortrait from '@/assets/footer-portrait.png';
 
 const Footer = () => {
   return (
@@ -93,12 +93,12 @@ const Footer = () => {
           </div>
 
           {/* Image and Status Card - hidden on mobile, visible on sm+ */}
-          <div className="hidden sm:block col-span-1 md:col-span-6 relative rounded-lg overflow-hidden h-28 md:h-32 lg:h-36 self-start">
+          <div className="hidden sm:block col-span-1 md:col-span-6 relative rounded-lg overflow-hidden h-36 md:h-40 lg:h-44 self-start">
             {/* Background Image */}
             <img 
               alt="Vermeer style portrait" 
-              src="/lovable-uploads/43b96dc9-edd4-4990-bdb6-0f6e39aab1f2.png" 
-              className="absolute inset-0 w-full h-full object-cover object-[left_top] z-0" 
+              src={footerPortrait} 
+              className="absolute inset-0 w-full h-full object-cover object-left z-0" 
             />
             {/* Text Overlay - aligned right */}
             <div className="absolute inset-0 z-10 flex flex-col justify-center items-end text-right p-3 md:p-4 lg:p-6 pr-4 sm:pr-6 md:pr-8">
