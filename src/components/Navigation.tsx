@@ -31,9 +31,9 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img src={logo} alt="Deflated Affirmations" className="h-5 sm:h-6 lg:h-7 w-auto" />
-          </div>
+          </Link>
 
           {/* Desktop Navigation - only on lg+ */}
           <div className="hidden lg:flex items-center gap-6 xl:gap-8">
