@@ -16,27 +16,27 @@ const Hero = () => {
   return <section className="relative w-full h-[70svh] sm:h-[75svh] md:h-[85svh] lg:h-[100svh] min-h-[400px] sm:min-h-[450px] md:min-h-[520px] lg:min-h-[680px] overflow-hidden">
       {/* Background Sky - slowest parallax (extra bleed to prevent mobile stretching/gaps) */}
       <div className="absolute inset-0 -top-[10%] -bottom-[10%]" style={{
-      transform: `translate3d(0, ${scrollY * 0.2}px, 0)`
+      transform: `translate3d(0, ${scrollY * 0.35}px, 0)`
     }}>
         <img src={heroSky} alt="Renaissance sky with rainbow" className="w-full h-full object-cover object-[center_25%] sm:object-[center_35%] md:object-center" draggable={false} />
       </div>
 
-      {/* Angels - slightly larger for parallax visibility */}
-      <div className="absolute left-0 top-0 h-[28%] sm:h-[30%] md:h-[38%] lg:h-[50%] pointer-events-none" style={{
-      transform: `translate3d(0, ${scrollY * 0.1}px, 0)`
+      {/* Angels - larger on desktop with stronger parallax */}
+      <div className="absolute left-0 top-0 h-[28%] sm:h-[30%] md:h-[38%] lg:h-[60%] xl:h-[65%] pointer-events-none" style={{
+      transform: `translate3d(0, ${scrollY * 0.15}px, 0)`
     }}>
         <img src={angelLeft} alt="Angel with coffee" className="h-full w-auto object-contain object-left-top" draggable={false} />
       </div>
 
-      <div className="absolute right-0 bottom-0 h-[28%] sm:h-[30%] md:h-[38%] lg:h-[50%] pointer-events-none" style={{
-      transform: `translate3d(0, ${scrollY * 0.1}px, 0)`
+      <div className="absolute right-0 bottom-0 h-[28%] sm:h-[30%] md:h-[38%] lg:h-[60%] xl:h-[65%] pointer-events-none" style={{
+      transform: `translate3d(0, ${scrollY * 0.15}px, 0)`
     }}>
         <img src={angelRight} alt="Angel with scroll" className="h-full w-auto object-contain object-right-bottom" draggable={false} />
       </div>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 sm:px-6" style={{
-      transform: `translate3d(0, ${scrollY * 0.25}px, 0)`
+      transform: `translate3d(0, ${scrollY * 0.45}px, 0)`
     }}>
         <h1 className="font-display italic text-xl sm:text-2xl lg:text-5xl xl:text-6xl text-charcoal max-w-[78%] sm:max-w-lg md:max-w-xl lg:max-w-2xl leading-snug sm:leading-relaxed animate-fade-in-up md:text-5xl">
           Lowering expectations, one
