@@ -98,7 +98,7 @@ const Footer = () => {
             <img 
               alt="Vermeer style portrait" 
               src="/lovable-uploads/43b96dc9-edd4-4990-bdb6-0f6e39aab1f2.png" 
-              className="absolute inset-0 w-full h-full object-cover object-left z-0" 
+              className="absolute inset-0 w-full h-full object-cover object-[left_top] z-0" 
             />
             {/* Text Overlay - aligned right */}
             <div className="absolute inset-0 z-10 flex flex-col justify-center items-end text-right p-3 md:p-4 lg:p-6 pr-4 sm:pr-6 md:pr-8">
