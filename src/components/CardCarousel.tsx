@@ -165,7 +165,7 @@ const CardCarousel = () => {
 
         {/* Flip Button */}
         <div className="flex justify-center mt-6 sm:mt-8">
-          <button onClick={flipCard} className="flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 text-primary-foreground font-sans text-xs sm:text-sm font-medium tracking-[0.1em] uppercase hover:bg-burnt-orange-dark transition-colors duration-300 bg-burnt-orange">
+          <button onClick={flipCard} className="flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 text-primary-foreground font-sans text-xs sm:text-sm font-medium tracking-[0.1em] uppercase hover:bg-burnt-orange-dark transition-colors duration-300 bg-burnt-orange hover-glow press-effect">
             <RotateCw size={14} className="sm:w-4 sm:h-4" />
             Flip Card
           </button>
