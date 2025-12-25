@@ -42,8 +42,8 @@ const Newsletter = () => {
                   Enter Email
                 </label>
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-stretch">
-                  <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="receive daily disappointments" className="flex-1 min-w-0 px-3 py-2.5 bg-background border border-border text-xs sm:text-sm font-sans placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" required />
-                  <button type="submit" className="w-full sm:w-auto px-4 sm:px-5 py-2.5 text-primary-foreground text-xs font-sans font-medium tracking-wider uppercase hover:bg-burnt-orange-dark transition-colors duration-300 bg-burnt-orange">
+                  <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="receive daily disappointments" className="flex-1 min-w-0 px-3 py-2.5 bg-background border border-border text-xs sm:text-sm font-sans placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary input-focus-effect" required />
+                  <button type="submit" className="w-full sm:w-auto px-4 sm:px-5 py-2.5 text-primary-foreground text-xs font-sans font-medium tracking-wider uppercase hover:bg-burnt-orange-dark transition-colors duration-300 bg-burnt-orange hover-glow press-effect">
                     Subscribe
                   </button>
                 </div>
