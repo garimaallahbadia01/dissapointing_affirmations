@@ -125,9 +125,12 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="mt-8 sm:mt-10 md:mt-12 pt-6 sm:pt-8 border-t border-warm-white/10">
+        <div className="mt-8 sm:mt-10 md:mt-12 pt-6 sm:pt-8 border-t border-warm-white/10 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
           <p className="text-[10px] sm:text-xs font-sans text-warm-white/40">
             © DEFLATED AFFIRMATIONS 2025
+          </p>
+          <p className="text-[10px] sm:text-xs font-sans text-warm-white/40">
+            Created by Garima Allahbadia
           </p>
         </div>
       </div>

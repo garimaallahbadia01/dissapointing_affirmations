@@ -3,10 +3,10 @@ import Footer from "@/components/Footer";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
       <Navigation />
       
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+      <main className="flex-1 max-w-4xl mx-auto px-4 sm:px-6 py-16 sm:py-24 w-full">
         <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-foreground mb-8 text-center">
           About Us
         </h1>
