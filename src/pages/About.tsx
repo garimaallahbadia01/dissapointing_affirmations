@@ -23,14 +23,20 @@ const About = () => {
           </p>
           
           <p>
-            Each card is designed with care, featuring artwork inspired by classical paintings 
-            paired with messages that are equal parts sardonic and sincere. Because sometimes, 
-            you just need a card that says what you're actually thinking.
+          Garima Allahbadia built this site as a conceptual project exploring AI tools because sometimes 
+          the best way to learn is to create something that doesn't take itself too seriously.
           </p>
           
           <p>
-            Whether you're looking for a gift for your most cynical friend or just need a 
-            daily reminder that it's okay to not have it all together, we've got you covered.
+            A note on expectations
+This is version one. It's functional but not perfect. Some features need refinement.
+But it's out there. And sometimes "shipped and imperfect" is better than "perfect and conceptual."
+Which feels very on-brand for a project about lowering expectations.
+          </p>
+          
+          <p>
+            If you have thoughts, feedback, or just want to share your own disappointing affirmations:
+            Reach out to me: garimaallahbadia01@gmail.com
           </p>
         </div>
       </main>
