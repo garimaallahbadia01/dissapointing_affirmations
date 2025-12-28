@@ -102,7 +102,7 @@ const CardCarousel = () => {
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
 
   return (
-    <section className="py-16 sm:py-20 md:py-28 lg:py-[12vh] xl:py-[14vh] 2xl:py-[16vh] px-4 sm:px-6 bg-background overflow-hidden flex items-center min-h-[auto] lg:min-h-[70vh] xl:min-h-[75vh]">
+    <section className="py-20 sm:py-24 md:py-32 lg:py-[16vh] xl:py-[18vh] 2xl:py-[20vh] px-4 sm:px-6 bg-background overflow-hidden flex items-center min-h-[auto] lg:min-h-[70vh] xl:min-h-[75vh]">
       <div
         ref={ref}
         className={`w-full max-w-7xl mx-auto transition-all duration-700 ease-out ${
@@ -122,7 +122,7 @@ const CardCarousel = () => {
 
           {/* Cards */}
           <div className="relative flex-1 flex items-center justify-center">
-            <div className="relative w-36 sm:w-48 md:w-60 lg:w-72">
+            <div className="relative w-[152px] sm:w-[202px] md:w-[252px] lg:w-[302px]">
               {cards.map((card, index) => <div 
                 key={card.id} 
                 className="transition-all duration-500 ease-out perspective-1000 cursor-pointer" 
