@@ -105,60 +105,67 @@ const CardCarousel = () => {
     <section className="py-16 sm:py-20 md:py-28 lg:py-[12vh] xl:py-[14vh] 2xl:py-[16vh] px-4 sm:px-6 bg-background overflow-hidden flex items-center min-h-[auto] lg:min-h-[70vh] xl:min-h-[75vh]">
       <div
         ref={ref}
-        className={`max-w-6xl mx-auto transition-all duration-700 ease-out ${
+        className={`w-full max-w-7xl mx-auto transition-all duration-700 ease-out ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}
       >
         {/* Cards Container with Navigation */}
-        <div className="relative flex items-center justify-center">
-          {/* Navigation Arrows */}
+        <div className="flex items-center justify-between gap-4 sm:gap-8 md:gap-12 lg:gap-16 xl:gap-24">
+          {/* Left Navigation Arrow */}
           <button
             onClick={prevCard}
-            className="absolute left-0 sm:left-2 md:left-4 lg:left-8 z-40 w-9 h-9 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full border border-[#412d0b]/30 bg-background/80 backdrop-blur-sm flex items-center justify-center text-[#412d0b] hover:bg-[#412d0b] hover:text-primary-foreground transition-all duration-300"
+            className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-[#412d0b]/30 bg-background flex items-center justify-center text-[#412d0b] hover:bg-[#412d0b] hover:text-primary-foreground transition-all duration-300"
             aria-label="Previous card"
           >
-            <ArrowLeft size={16} className="sm:w-[18px] sm:h-[18px] md:w-5 md:h-5" />
+            <ArrowLeft size={18} className="sm:w-5 sm:h-5" />
           </button>
 
           {/* Cards */}
-          <div className="relative w-36 sm:w-48 md:w-60 lg:w-72 mx-8 sm:mx-12 md:mx-16 lg:mx-20">
-            {cards.map((card, index) => <div 
-              key={card.id} 
-              className="transition-all duration-500 ease-out perspective-1000 cursor-pointer" 
-              style={{
-                ...getCardStyle(index, isMobile),
-                position: index === currentIndex ? 'relative' : 'absolute',
-                inset: index === currentIndex ? undefined : 0
-              }}
-              onClick={() => {
-                if (index === currentIndex) {
-                  flipCard();
-                }
-              }}
-            >
-                <div className={`relative w-full preserve-3d transition-transform duration-700 ${flippedCards.has(index) ? 'rotate-y-180' : ''}`}>
-                  {/* Front */}
-                  <div className="backface-hidden rounded-xl overflow-hidden shadow-2xl">
-                    <img src={card.frontImage} alt="Affirmation card" className="w-full h-auto" />
-                  </div>
+          <div className="relative flex-1 flex items-center justify-center">
+            <div className="relative w-36 sm:w-48 md:w-60 lg:w-72">
+              {cards.map((card, index) => <div 
+                key={card.id} 
+                className="transition-all duration-500 ease-out perspective-1000 cursor-pointer" 
+                style={{
+                  ...getCardStyle(index, isMobile),
+                  position: index === currentIndex ? 'relative' : 'absolute',
+                  inset: index === currentIndex ? undefined : 0
+                }}
+                onClick={() => {
+                  if (index === currentIndex) {
+                    flipCard();
+                  }
+                }}
+              >
+                  <div className={`relative w-full preserve-3d transition-transform duration-700 ${flippedCards.has(index) ? 'rotate-y-180' : ''}`}>
+                    {/* Front */}
+                    <div className="backface-hidden rounded-xl overflow-hidden shadow-2xl">
+                      <img src={card.frontImage} alt="Affirmation card" className="w-full h-auto" />
+                    </div>
 
-                  {/* Back */}
-                  <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-xl overflow-hidden shadow-2xl">
-                    <img src={cardBackTemplate} alt="Card back" className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 flex flex-col items-center justify-center p-4 xs:p-5 sm:p-6 md:p-8">
-                      <h3 className="font-display italic text-base xs:text-lg sm:text-xl md:text-2xl text-charcoal text-center leading-tight mb-2 sm:mb-3">
-                        {card.backQuote}
-                      </h3>
-                      <p className="font-sans text-[10px] xs:text-xs sm:text-sm text-charcoal/80 text-center leading-relaxed max-w-[90%] sm:max-w-[85%]">
-                        {card.backPunchline}
-                      </p>
+                    {/* Back */}
+                    <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-xl overflow-hidden shadow-2xl">
+                      <img src={cardBackTemplate} alt="Card back" className="w-full h-full object-cover" />
+                      <div className="absolute inset-0 flex flex-col items-center justify-center p-4 xs:p-5 sm:p-6 md:p-8">
+                        <h3 className="font-display italic text-base xs:text-lg sm:text-xl md:text-2xl text-charcoal text-center leading-tight mb-2 sm:mb-3">
+                          {card.backQuote}
+                        </h3>
+                        <p className="font-sans text-[10px] xs:text-xs sm:text-sm text-charcoal/80 text-center leading-relaxed max-w-[90%] sm:max-w-[85%]">
+                          {card.backPunchline}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>)}
+                </div>)}
+            </div>
           </div>
 
-          <button onClick={nextCard} className="absolute right-0 sm:right-2 md:right-4 lg:right-8 z-40 w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-[#412d0b]/30 bg-background/80 backdrop-blur-sm flex items-center justify-center text-[#412d0b] hover:bg-[#412d0b] hover:text-primary-foreground transition-all duration-300" aria-label="Next card">
+          {/* Right Navigation Arrow */}
+          <button 
+            onClick={nextCard} 
+            className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-[#412d0b]/30 bg-background flex items-center justify-center text-[#412d0b] hover:bg-[#412d0b] hover:text-primary-foreground transition-all duration-300" 
+            aria-label="Next card"
+          >
             <ArrowRight size={18} className="sm:w-5 sm:h-5" />
           </button>
         </div>
